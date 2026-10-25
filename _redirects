@@ -1,0 +1,3 @@
+# SPA fallback: every path serves the app, the router resolves the route
+# (keeps the old Gatsby-style URLs alive, e.g. /blogs/cascais-anchorage)
+/* /index.html 200

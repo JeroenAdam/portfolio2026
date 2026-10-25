@@ -1,0 +1,1089 @@
+{
+  "_comment": "Static content for the single-page portfolio. Edit freely; the app fetches this file.",
+  "site": {
+    "title": "Jeroen Adam | IT Generalist, Web Developer",
+    "description": "Personal portfolio of Jeroen Adam: IT generalist, web developer, author of Talim.app."
+  },
+  "profile": {
+    "name": "Jeroen Adam",
+    "greetingArabic": "السلام عليكم",
+    "headline": "IT Generalist | Web Developer",
+    "authorOf": "author of Talim.app",
+    "talimUrl": "https://talim.app",
+    "note": "(and working remotely aboard my sailboat)",
+    "heroImage": "images/hero-img.avif",
+    "heroImageFallback": "images/hero-img.png",
+    "email": "info@adambahri.com",
+    "formAction": "https://formspree.io/meqpjjrr",
+    "social": [
+      {
+        "id": "linkedin",
+        "label": "Linkedin account",
+        "icon": "fa-brands fa-linkedin",
+        "url": "https://www.linkedin.com/in/jeroen-devenijn/"
+      },
+      {
+        "id": "github",
+        "label": "Github profile",
+        "icon": "fa-brands fa-github",
+        "url": "https://github.com/JeroenAdam"
+      },
+      {
+        "id": "dev",
+        "label": "Dev.to website",
+        "icon": "fa-brands fa-dev",
+        "url": "https://dev.to/jeroenadam"
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "id": 1,
+      "text": "home",
+      "url": "#/",
+      "icon": "fa-solid fa-house"
+    },
+    {
+      "id": 2,
+      "text": "about",
+      "url": "#/about",
+      "icon": "fa-solid fa-user"
+    },
+    {
+      "id": 3,
+      "text": "projects",
+      "url": "#/projects",
+      "icon": "fa-solid fa-briefcase"
+    },
+    {
+      "id": 4,
+      "text": "my voyages",
+      "url": "#/myvoyages",
+      "icon": "fa-solid fa-compass"
+    },
+    {
+      "id": 5,
+      "text": "blog",
+      "url": "#/blog",
+      "icon": "fa-solid fa-newspaper"
+    },
+    {
+      "id": 6,
+      "text": "my boat",
+      "url": "#/myboat",
+      "icon": "fa-solid fa-anchor"
+    },
+    {
+      "id": 7,
+      "text": "contact",
+      "url": "#/contact",
+      "icon": "fa-solid fa-envelope"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "title": "IT / APPLICATION SUPPORT",
+      "text": "(8y.) Handling a business-critical app (+500 users), former service desk tech lead (5y.)."
+    },
+    {
+      "id": 2,
+      "icon": "fa-solid fa-server",
+      "title": "DEVOPS / CLOUD",
+      "text": "Infra/server mgmt., scripting, low-code, API integration, CI/CD, ChatOps, MLOps."
+    },
+    {
+      "id": 3,
+      "icon": "fa-solid fa-database",
+      "title": "DATABASES",
+      "text": "Handling SQL databases on a daily basis, building queries, backup/restore tasks."
+    },
+    {
+      "id": 4,
+      "icon": "fa-solid fa-code",
+      "title": "PROGRAMMING / TESTING",
+      "text": "Java / Spring / JavaScript / React / Node.js. Test automation, manual testing."
+    },
+    {
+      "id": 5,
+      "icon": "fa-solid fa-mug-hot",
+      "title": "WEB DEVELOPMENT",
+      "text": "Developing web applications, for knowledge workers, for educators, for entrepreneurs."
+    },
+    {
+      "id": 6,
+      "icon": "fa-solid fa-language",
+      "title": "LANGUAGES / COMMUNICATION",
+      "text": "Trilingual (nl/fr/en), good communicator, research minded, knowledge mgmt."
+    }
+  ],
+  "jobs": [
+    {
+      "company": "Pepper One",
+      "position": "IT Generalist",
+      "date": "14/09/2018 - Present",
+      "duration": "8y.",
+      "desc": [
+        "**Application support**: handling a business-critical app (+500 users)",
+        "**DevOps**: automating the software development workflow, managing infra, [ChatOps](#/projects#collaboration-workspace), [MLOps](#/blogs/building-an-enterprise-ai-environment)",
+        "**Web development**: adding new features to our business application",
+        " **Databases**: handling MySQL daily, building queries",
+        "**Testing**: test automation, manual testing",
+        "**Communication**: with customers, dev team and product owner"
+      ]
+    },
+    {
+      "company": "Econocom Maroc",
+      "position": "Service Desk Tech Lead / Service Desk Coordinator",
+      "date": "14/05/2013 - 13/09/2018",
+      "duration": "5y.",
+      "desc": [
+        "Coordinating the operations within a Service Desk team (+5.000 end-users)",
+        "I created a self-help tool, a **[Skill Matrix](#/skillmatrix)**, for Service Desk agents",
+        "Incident handling (5y.) / SPOC for team members (4,5y.) and customer (3y.) / Knowledge mgmt. (3y.) / SLA reporting (2y.)"
+      ]
+    },
+    {
+      "company": "Self-employed",
+      "position": "IT shop owner, IT teacher (side job)",
+      "date": "01/09/2001 - 13/05/2013",
+      "duration": "12y.",
+      "desc": [
+        "IT-shop owner (7y.) / IT-teacher (part-time) (5y.)",
+        "I coded my own **[bookkeeping app](#/bookkeeping-app)**",
+        "Organized daytrips with my **[sailboat](#/myboat)** (2y.)",
+        "I decided to start a new life outside the EU"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Content sharing platform",
+      "featured": true,
+      "status": "Status: live on Talim.app - try the demo",
+      "descriptionHtml": "<p><strong>Description</strong>: web app allowing educators to search, discover, submit and share educational resources</p>\n<p><strong>Type of content</strong>: articles, documents, presentations, images, URLs, announcements</p>\n<p><strong>Use cases</strong>: browse educational resources, search &#x26; discover, store your resources, share w/ others</p>\n<p><strong>Key features</strong>: great search experience, relevant results, submit / upvote / share resources, favorites, saved searches, send feedback, intuitive editor, responsive design, user / moderator dashboards</p>",
+      "github": "https://github.com/jeroenadam/content-sharing-platform",
+      "url": "https://talim.app",
+      "stack": [
+        "Java  -  Spring Boot  -  React  -  PostgreSQL  -  Elasticsearch  -  Keycloak  -  Docker"
+      ],
+      "image": "images/talimv1.webp"
+    },
+    {
+      "title": "Personal knowledge mgmt. app",
+      "featured": false,
+      "status": "Status: app is live - try the demo",
+      "descriptionHtml": "<p><strong>Description</strong>: my own PKM app allows me to store, structure and retrieve knowledge/information</p>\n<p><strong>Type of content</strong>: text, images, files, URLs, videos...</p>\n<p><strong>Use cases</strong>: store of knowledge for learning or research, store of work procedures, structure your notes, personalized workspace</p>\n<p><strong>Key features</strong>: note-taking on any device, browse by tags, links/backlinks, fast search, file uploads, media preview, progress tracking, diff view, recent history, recycle bin, responsive UI, backups, self-hosted</p>",
+      "github": "https://github.com/JeroenAdam/my-personal-knowledge-management-system",
+      "url": "https://knowledge.adambahri.com",
+      "stack": [
+        "Java - Spring Boot - React - MySQL - Elasticsearch - Docker"
+      ],
+      "image": "images/contentful.webp"
+    },
+    {
+      "title": "Collaboration Workspace",
+      "featured": false,
+      "status": "Status: work in progress",
+      "descriptionHtml": "<p><strong>Description</strong>: a digital platform that integrates conversations, business processes and tools</p>\n<p><strong>Type of content</strong>: text, images, files, URLs, videos...</p>\n<p><strong>Use cases</strong>: communicate internally, with customers or partners on your platform / integrated with project mgmt. apps, business apps, chatbots</p>\n<p><strong>Key features</strong>: messaging on any device / one place for all conversations / store of customer interactions / handle your team's projects and tasks right from your workspace / workflow automation / AI assistant</p>",
+      "github": "https://github.com/JeroenAdam/my-pmtool",
+      "url": "../video",
+      "stack": [
+        "Spring Boot - Node.js - React - Team chat - Custom project mgmt. app"
+      ],
+      "image": "images/custom-pmtool-screenshot-portfolio-bis.webp"
+    },
+    {
+      "title": "Portfolio / Blog",
+      "featured": false,
+      "status": "This is the website you are visiting now",
+      "descriptionHtml": "<p><strong>Description</strong>: a portfolio website showcasing my IT projects + personal blog</p>\n<p><strong>Type of content</strong>: pages, articles, pictures, videos</p>\n<p><strong>Use cases</strong>: present myself and my voyages. As I'm also the author, a modern workflow, minimal maintenance, easily add/edit content</p>\n<p><strong>Key features</strong>: basic portfolio components + blog / content &amp; structure adjustable with an AI agent / responsive layout / light &amp; dark theme / slideshow component / image viewer / contact form / static hosting</p>",
+      "github": "",
+      "url": "",
+      "stack": [
+        "React - JavaScript - Netlify - GitHub"
+      ],
+      "image": "images/blog-2026.webp"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "5d9af227-3daa-5f49-9a8d-33166b65816c",
+      "slug": "my-side-project",
+      "title": "My current side project",
+      "desc": "Introducing my side project, an educational resource repository. About its goal, progress and future.",
+      "created": "2025-08-31",
+      "category": [
+        "LEARNING"
+      ],
+      "image": "images/polished17.webp",
+      "content": "The web app I am developing allows educators to browse, discover, submit and share educational resources such as articles, documents, presentations, etc. The web app will help educators facilitate children's learning.\n\n<a id=\"sideproject-1\" href=\"#sideproject\"><img src=\"images/sideproject1.webp\"></a><div class=\"lightbox\" id=\"sideproject\"><a href=\"#sideproject-1\"><span style=\"background-image: url('images/sideproject1.webp')\"></span></a></div>\n\nSo far, I've completed the research and design phase and I developed a **[basic prototype](https://login.adambahri.com:1112/realms/jhipster/protocol/openid-connect/auth?response_type=code&client_id=web_app&redirect_uri=https://app.adambahri.com:1114&login_hint=user&password=user)**.\n\nI am currently working on the UI (React). As for the backend, I'm progressing with features such voting and favorites.\n\nThere are quite some other features still to be done. I'll continue working on the filters, navigation, moderation, notifications and user/moderator dashboards. I'm planning for even a better search experience by adding semantic search and a better editor with inbuilt note-taking.\n\n<a id=\"sideproject-2\" href=\"#sideproject2\"><img src=\"images/sideproject2.webp\"></a><div class=\"lightbox\" id=\"sideproject2\"><a href=\"#sideproject-2\"><span style=\"background-image: url('images/sideproject2.webp')\"></span></a></div>\n\nI'm not in a hurry so there is no timeline, eventually I'll publish educational resources that are relevant to me but for now I'm focusing on the technical aspects. Maybe one day I'll create an online community.\n\nFuture plans: integrate a Large Language Model for better discoverability of educational resources.\n\nThat's all I have for now. If this project interests you, don’t hesitate to [contact me](#/contact)."
+    },
+    {
+      "id": "4c42f359-4485-5a48-b4eb-2be27f2d34ed",
+      "slug": "building-an-enterprise-ai-environment",
+      "title": " Building an Enterprise AI Environment",
+      "desc": "At work I was tasked to build an enterprise-level AI environment as an alternative to platforms like OpenAI.",
+      "created": "2025-03-15",
+      "category": [
+        "Job"
+      ],
+      "image": "images/AI-meme.webp",
+      "content": "At work I was tasked to build an enterprise-level AI environment as an alternative to platforms like OpenAI.\n\nLet me first state the use cases: chatting with codebases, technical documentation, knowledge bases, chatlogs, social media posts, public business data, search results from the web (independent from Google).\n\nI went with a Debian-based server equipped with an Nvidia H100 GPU.\nFor the interface, I chose [Open WebUI](https://github.com/open-webui/open-webui?tab=readme-ov-file#open-webui-), an open-source solution with functionalities similar to proprietary AI interfaces.\nThe installation was easy thanks to a pre-configured [Docker container](https://hub.docker.com/r/thelocallab/ollama-openwebui) that includes Open WebUI and Ollama, an LLM runner. One minor downside currently is the outdated Ollama version in the container. I've contacted the creator and an update is expected soon.\n\nI'm now using [Command A](https://cohere.com/blog/command-a), an enterprise-level LLM, on one single 80GB GPU, though two GPUs would be optimal.\nVery soon, the open-sourcing of [Qwen 2.5 Max](https://qwenlm.github.io/blog/qwen2.5-max) and Meta's upcoming [Llama](https://www.llama.com/) 4 release will make it even more interesting.\n\nThat said, what about those use cases I mentioned earlier? Here’s a quote from Linus Torvalds, the creator of Linux:\n> AI is going to change the world... but right now it's 90% marketing and 10% reality...\n> In 5 years we'll see what of the AI is getting used everyday for real workloads. \n\nSo, what's next? I'll try out [Retrieval-Augmented Generation](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation) and [Model Context Protocol](https://modelcontextprotocol.io/introduction).\n\nThat's all I have for now, bye."
+    },
+    {
+      "id": "57baa5a2-4d5b-542a-8cff-74c32dd81c01",
+      "slug": "another-summer-another-side-project",
+      "title": "Another summer, another side project",
+      "desc": "I have been building my own Personal Knowledge Mgmt. app.",
+      "created": "2024-07-19",
+      "category": [
+        "Learning"
+      ],
+      "image": "images/pkms.webp",
+      "content": "A quick post to show off my latest side project, my own Personal Knowledge Mgmt. app allowing me to store, structure and retrieve knowledge.\n\nKey features: note-taking on any device, tags, links/backlinks, fast search, file uploads, media preview, progress tracking, diff view, recent history, responsive UI, self-hosted.\n\n<a id=\"coffee\" href=\"#coffee1\"><img src=\"images/coffee.png\"></a><div class=\"lightbox\" id=\"coffee1\"><a href=\"#coffee\"><span style=\"background-image: url('images/coffee.png')\"></span></a></div>\n\n<a id=\"pkm-1\" href=\"#pkm1\"><img src=\"images/pkm1.png\"></a><div class=\"lightbox\" id=\"pkm1\"><a href=\"#pkm-1\"><span style=\"background-image: url('images/pkm1.png')\"></span></a></div>\n\n<a id=\"pkm-2\" href=\"#pkm2\"><img src=\"images/pkm2.png\"></a><div class=\"lightbox\" id=\"pkm2\"><a href=\"#pkm-2\"><span style=\"background-image: url('images/pkm2.png')\"></span></a></div>\n\n<a id=\"pkm-3\" href=\"#pkm3\"><img src=\"images/pkm3.png\"></a><div class=\"lightbox\" id=\"pkm3\"><a href=\"#pkm-3\"><span style=\"background-image: url('images/pkm3.png')\"></span></a></div>\n\nBuilt with Spring Boot, React and Elasticsearch.\n\nSource code available [here](https://github.com/JeroenAdam/my-personal-knowledge-management-system).\n"
+    },
+    {
+      "id": "2633a592-2441-5828-80f5-5112426332d5",
+      "slug": "life-aboard",
+      "title": "Life aboard",
+      "desc": "So, how is life aboard with two children and how is it to be surrounded by water all the time?",
+      "created": "2018-07-13",
+      "category": [
+        "family"
+      ],
+      "image": "images/lifeaboard3-ctf.webp",
+      "content": "So, how is life aboard with two children and how is it to be surrounded by water all the time? Answer:\n\n*calm*: there is lots of space in the marina and a constant air breeze while noises comes from at least 70m. distance away. Sometimes, when I really want to escape from daily life, I spend some time in the cockpit thinking/daydreaming while assuring the wind reaches my ears, the same thing when relaxing inside the boat with a blower directed towards me. Launching a Youtube video, in order to escape from daily life is an alternative, but it is nice to have choices.\n\n*chaotic*: two children... do I need to say more? I can say one thing: the boat is their amusement parc, as for me and my wife, both of us represent the cleaning team.\n\n*safe*: boat interiors are designed not to break easily and not to harm people in rough seas, so far no harm or damage occurred in the marina, not to the children and not to the boat. About the exterior, we have installed netting on all sides preventing the children from falling into the water. Life aboard is very safe. \n\n*freedom*: knowing to have escaped from the crowdy city while at the same time you could easily walk over there.\n\n*busy*: keeping the boat maintained/clean combined with a daytime job and two attention-demanding children on top of that... there is some time left... eg. for reading online, however books, sadly, not much time for that lately.\n\nHere below some pictures of the very best of all moments: that must be on a Friday afternoon!\n\n<div></div>\n<a id=\"lifeaboard-4\" href=\"#lifeaboard4\"><img src=\"images/lifeaboard4-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard4\"><a href=\"#lifeaboard-4\"><span style=\"background-image: url('images/lifeaboard4.webp')\"></span></a></div>\n<a id=\"lifeaboard-5\" href=\"#lifeaboard5\"><img src=\"images/lifeaboard5-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard5\"><a href=\"#lifeaboard-5\"><span style=\"background-image: url('images/lifeaboard5.webp')\"></span></a></div>\n<a id=\"lifeaboard-6\" href=\"#lifeaboard6\"><img src=\"images/lifeaboard6-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard6\"><a href=\"#lifeaboard-6\"><span style=\"background-image: url('images/lifeaboard6.webp')\"></span></a></div>\n<a id=\"lifeaboard-8\" href=\"#lifeaboard8\"><img src=\"images/lifeaboard8-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard8\"><a href=\"#lifeaboard-8\"><span style=\"background-image: url('images/lifeaboard8.webp')\"></span></a></div>\n<a id=\"lifeaboard-9\" href=\"#lifeaboard9\"><img src=\"images/lifeaboard9-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard9\"><a href=\"#lifeaboard-9\"><span style=\"background-image: url('images/lifeaboard9.webp')\"></span></a></div>\n<a id=\"lifeaboard-10\" href=\"#lifeaboard10\"><img src=\"images/lifeaboard10-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard10\"><a href=\"#lifeaboard-10\"><span style=\"background-image: url('images/lifeaboard10.webp')\"></span></a></div>\n<a id=\"lifeaboard-11\" href=\"#lifeaboard11\"><img src=\"images/lifeaboard11-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard11\"><a href=\"#lifeaboard-11\"><span style=\"background-image: url('images/lifeaboard11.webp')\"></span></a></div>\n<a id=\"lifeaboard-12\" href=\"#lifeaboard12\"><img src=\"images/lifeaboard12-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard12\"><a href=\"#lifeaboard-12\"><span style=\"background-image: url('images/lifeaboard12.webp')\"></span></a></div>\n<a id=\"lifeaboard-3\" href=\"#lifeaboard3\"><img src=\"images/lifeaboard3-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard3\"><a href=\"#lifeaboard-3\"><span style=\"background-image: url('images/lifeaboard3.webp')\"></span></a></div>\n<a id=\"lifeaboard-2\" href=\"#lifeaboard2\"><img src=\"images/lifeaboard2-resized.webp\"></a><div class=\"lightbox\" id=\"lifeaboard2\"><a href=\"#lifeaboard-2\"><span style=\"background-image: url('images/lifeaboard2.webp')\"></span></a></div>\n"
+    },
+    {
+      "id": "99a41734-0152-5106-ae95-4023dced2118",
+      "slug": "tanger-marina-smir",
+      "title": "Tanger, Marina Smir",
+      "desc": "Last summer we departed again for Marina Smir.",
+      "created": "2017-10-01",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/tanger2017x_7bb2a24b8e.webp",
+      "content": "Last summer we departed again for Marina Smir with a planned stop in Tanger. The new marina in Tanger was not operational yet so we stayed in the old port. Here below some pictures.\n\n<div></div>\n<a id=\"tanger-2017\" href=\"#tanger2017\"><img src=\"images/tanger2017-resized.jpg\"></a><div class=\"lightbox\" id=\"tanger2017\"><a href=\"#tanger-2017\"><span style=\"background-image: url('images/tanger2017.webp')\"></span></a></div>\n<a id=\"albughaz-2017\" href=\"#albughaz2017\"><img src=\"images/albughaz2017-resized.jpg\"></a><div class=\"lightbox\" id=\"albughaz2017\"><a href=\"#albughaz-2017\"><span style=\"background-image: url('images/albughaz2017.webp')\"></span></a></div>"
+    },
+    {
+      "id": "e1cfb64e-3279-522b-a36a-ba21e9ec6c80",
+      "slug": "summer-plans",
+      "title": "Summer plans",
+      "desc": "This summer Insha'Allah we'll navigate again to the bay of Tanger.",
+      "created": "2017-03-03",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/tanjamarinabay_7efd56bf96.webp",
+      "content": "This summer Insha'Allah we'll navigate again to the bay of Tanger, Marina Smir and possibly a first visit to Al Hoceima. Here below a picture of the brand new marina at Tanger. Since our last visit, our family grew, with one member :-)\n\n<div></div>\n<a id=\"tanja-marina-bay\" href=\"#tanjamarinabay\"><img src=\"images/tanjamarinabay.jpg\"></a><div class=\"lightbox\" id=\"tanjamarinabay\"><a href=\"#tanja-marina-bay\"><span style=\"background-image: url('images/tanjamarinabay.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "0dc5e1ea-1d40-5969-8bec-dc4989d0a531",
+      "slug": "getting-ready-for-a-sysadmin-job",
+      "title": "Getting ready for a sysadmin job",
+      "desc": "Last summer I bought two HP Proliant (G6/G7) servers.",
+      "created": "2015-07-25",
+      "category": [
+        "job"
+      ],
+      "image": "images/server_d27bc21fd9.webp",
+      "content": "Last summer I bought two HP Proliant (G6/G7) servers, lots of memory (156GB), ten SAS/SSD disks and lots of network cards. I'm now playing around in a sandbox environment to get ready for a system administration job.\n\n<div></div>\n<a id=\"getting-ready\" href=\"#server\"><img src=\"images/server-resized.jpg\"></a><div class=\"lightbox\" id=\"server\"><a href=\"#getting-ready\"><span style=\"background-image: url('images/server.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "14280346-dc45-51a3-8529-c89ecdeb4fed",
+      "slug": "maryna-smyr-marina-smir",
+      "title": "مارينا سمير - Marina Smir",
+      "desc": "مارينا سمير - Marina Smir",
+      "created": "2015-06-30",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/tamudabay_c1083bcf94.webp",
+      "content": "مارينا سمير - Marina Smir\n\n<div></div>\n<a id=\"tamuda-bay\" href=\"#tamudabay\"><img src=\"images/tamudabay.jpg\"></a><div class=\"lightbox\" id=\"tamudabay\"><a href=\"#tamuda-bay\"><span style=\"background-image: url('images/tamudabay.jpg')\"></span></a></div>\n<a id=\"smir-0\" href=\"#smir0\"><img src=\"images/smir0.jpg\"></a><div class=\"lightbox\" id=\"smir0\"><a href=\"#smir-0\"><span style=\"background-image: url('images/smir0.jpg')\"></span></a></div>\n<a id=\"smir-1\" href=\"#smir1\"><img src=\"images/smir1.jpg\"></a><div class=\"lightbox\" id=\"smir1\"><a href=\"#smir-1\"><span style=\"background-image: url('images/smir1.jpg')\"></span></a></div>\n<a id=\"smir-2\" href=\"#smir2\"><img src=\"images/smir2.jpg\"></a><div class=\"lightbox\" id=\"smir2\"><a href=\"#smir-2\"><span style=\"background-image: url('images/smir2.jpg')\"></span></a></div>\n<a id=\"smir-3\" href=\"#smir3\"><img src=\"images/smir3.jpg\"></a><div class=\"lightbox\" id=\"smir3\"><a href=\"#smir-3\"><span style=\"background-image: url('images/smir3.jpg')\"></span></a></div>\n<a id=\"smir-4\" href=\"#smir4\"><img src=\"images/smir4.jpg\"></a><div class=\"lightbox\" id=\"smir4\"><a href=\"#smir-4\"><span style=\"background-image: url('images/smir4.jpg')\"></span></a></div>\n<a id=\"smir-5\" href=\"#smir5\"><img src=\"images/smir5.jpg\"></a><div class=\"lightbox\" id=\"smir5\"><a href=\"#smir-5\"><span style=\"background-image: url('images/smir5.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "f0219e67-8f09-5b44-9749-ad0ac4ed47cc",
+      "slug": "tnjt-tanger",
+      "title": "طنجة - Tanger",
+      "desc": "طنجة - Tanger",
+      "created": "2015-06-05",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/tangerport_ceb2109476.webp",
+      "content": "طنجة - Tanger\n\n<a id=\"tanger-port\" href=\"#tangerport\"><img src=\"images/tangerport.jpg\"></a><div class=\"lightbox\" id=\"tangerport\"><a href=\"#tanger-port\"><span style=\"background-image: url('images/tangerport.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "07c8c032-2dda-5968-a2c3-479f8153ff40",
+      "slug": "moroccan-it-outsourcing-success",
+      "title": "Moroccan IT outsourcing success",
+      "desc": "Some facts about the Moroccan IT outsourcing success.",
+      "created": "2015-04-26",
+      "category": [
+        "job"
+      ],
+      "image": "images/outsourcing1_2140c86c56.webp",
+      "content": "As promised before, I present you some facts about the Moroccan IT outsourcing success.\n\n<div></div>\n<a id=\"outsourcing-1\" href=\"#outsourcing1\"><img src=\"images/outsourcing1.png\"></a><div class=\"lightbox\" id=\"outsourcing1\"><a href=\"#outsourcing-1\"><span style=\"background-image: url('images/outsourcing1.png')\"></span></a></div>\n<a id=\"outsourcing-2\" href=\"#outsourcing2\"><img src=\"images/outsourcing2.png\"></a><div class=\"lightbox\" id=\"outsourcing2\"><a href=\"#outsourcing-2\"><span style=\"background-image: url('images/outsourcing2.png')\"></span></a></div>\n\nSource: [document](https://www.intracen.org/uploadedFiles/intracenorg/Content/Exporters/Sectors/Service_exports/Trade_in_services/MOROCCO.pdf)\n"
+    },
+    {
+      "id": "37bc0be7-4c84-553a-9fd8-889737beb06a",
+      "slug": "we-now-have-a-little-daughter",
+      "title": "We now have a little daughter",
+      "desc": "My wife and I now have a little daughter and it will be our first long trip on the ocean.",
+      "created": "2014-10-19",
+      "category": [
+        "family"
+      ],
+      "image": "images/nour_51cea4151a.webp",
+      "content": "Seven months have passed since my last update. My next trip Insha'Allah will be to Marina Smir after the winter season. It will be a unique experience since my wife and I now have a little daughter and it will be our first long trip on the ocean. As a sidenote, the new marina in the city of Tanger is getting close to be finished. See the picture below.\n\n<div></div>\n<a id=\"nour-1\" href=\"#nour\"><img src=\"images/nour-resized.jpg\"></a><div class=\"lightbox\" id=\"nour\"><a href=\"#nour-1\"><span style=\"background-image: url('images/nour.jpg')\"></span></a></div>\n<a id=\"tanger-1\" href=\"#tanger\"><img src=\"images/tanger.jpg\"></a><div class=\"lightbox\" id=\"tanger\"><a href=\"#tanger-1\"><span style=\"background-image: url('images/tanger.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "a59b707a-3ca4-53d4-8869-e02e6dde401e",
+      "slug": "the-concept-of-outsourcing-labour",
+      "title": "The concept of outsourcing labour",
+      "desc": "The concept of outsourcing labour is exactly what I had in mind in 2012, I wanted to outsource my own labour.",
+      "created": "2014-03-22",
+      "category": [
+        "job"
+      ],
+      "image": "images/work_285d83e64f.webp",
+      "content": "So, what have I been doing in the past 10 months?\n\nI started working in IT again... \n\nBefore moving to Morocco, I used to run a PC shop for many years. I was an IT guy doing mainly IT hardware repairs and PC troubleshooting stuff. My domain at that time was the IT consumer market.\n\nTen months ago, I got hired as an IT support agent and shortly after, I became technical lead at the Service Desk of this large enterprise (5.000 managed workstations). This time I'm working in an enterprise environment and my mission is this: log and resolve incidents to help keeping the IT infrastructure running. I have been working hard and I'm preparing myself for the next project: IT support level 2, solving the more complex issues.\n\nMany people would ask me how I did manage to find a job that easily since I'm not (yet) a fluent Arabic speaker. The answer to that: I'm using my native language since our client is a large Belgian utility company. They are saving a substantial amount of money by outsourcing a part of their IT operations offshore. **I am so THANKFUL to the greedy Belgian government... thanks to their tax system which taxes away around 2/3rds of people's labour, I easily found a job in Rabat. Here, from 2.500 km's away, I help keeping the IT infrastructure running in the benefit of this Belgian utility company.**\n\nIn my experience, an average wage is taxed away between 20~30% in Morocco and there are no unemployment benefits to pay for. I'm getting paid at the level of a construction engineer because IT skills combined with foreign languages (other than EN/FR) are very rare in Morocco, and not less important, the Moroccan IT service sector is showing double-digit annual growth.\n\nThe whole concept of outsourcing labour is exactly what I had in mind in 2012, I wanted to outsource my own labour. I did not want to continue being a productive EU citizen so I outsourced myself to the African continent :-)\n\nMore on the beautiful IT service outsourcing story in a next update...\n\n<a id=\"work-1\" href=\"#work\"><img src=\"images/work.jpg\"></a><div class=\"lightbox\" id=\"work\"><a href=\"#work-1\"><span style=\"background-image: url('images/work.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "dcb9056a-edea-5556-b723-44e26c629a0a",
+      "slug": "gibraltar-mohammedia-rabat",
+      "title": "Gibraltar-Mohammedia-Rabat",
+      "desc": "Here you have some pictures from my trip Gibraltar-Mohammedia-Rabat",
+      "created": "2014-01-14",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/maroc01_401277910d.webp",
+      "content": "Here you have some pictures from my trip Gibraltar-Mohammedia-Rabat, the next update will follow soon Insha'Allah.\n\n<div></div>\n<a id=\"Maroc-01\" href=\"#Maroc01\"><img src=\"images/Maroc01.jpg\"></a><div class=\"lightbox\" id=\"Maroc01\"><a href=\"#Maroc-01\"><span style=\"background-image: url('images/Maroc01.jpg')\"></span></a></div>\n<a id=\"Maroc-02\" href=\"#Maroc02\"><img src=\"images/Maroc02.jpg\"></a><div class=\"lightbox\" id=\"Maroc02\"><a href=\"#Maroc-02\"><span style=\"background-image: url('images/Maroc02.jpg')\"></span></a></div>\n<a id=\"Maroc-03\" href=\"#Maroc03\"><img src=\"images/Maroc03.jpg\"></a><div class=\"lightbox\" id=\"Maroc03\"><a href=\"#Maroc-03\"><span style=\"background-image: url('images/Maroc03.jpg')\"></span></a></div>\n<a id=\"Maroc-04\" href=\"#Maroc04\"><img src=\"images/Maroc04.jpg\"></a><div class=\"lightbox\" id=\"Maroc04\"><a href=\"#Maroc-04\"><span style=\"background-image: url('images/Maroc04.jpg')\"></span></a></div>\n<a id=\"Maroc-05\" href=\"#Maroc05\"><img src=\"images/Maroc05.jpg\"></a><div class=\"lightbox\" id=\"Maroc05\"><a href=\"#Maroc-05\"><span style=\"background-image: url('images/Maroc05.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "a7ab39f8-a23d-5efa-8b93-413d55add175",
+      "slug": "moving-the-boat-back-to-morocco",
+      "title": "Moving the boat back to Morocco",
+      "desc": "When, and only when, the tax is paid, customs release YOUR good and you become again the owner.",
+      "created": "2013-12-31",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/taxation_54dc68d453.webp",
+      "content": "ETA Saturday 04/01 before sunset Insha'allah. Alhamdulillah I found a 30 hour windows to do the job while wave height is forecast at 2.5/3m, this is a rather comfortable sea state in winter time. I would have loved to move 5 days earlier with a 1.5m forecast but that would have meant Moroccan customs would have noted down my arrival in the current year 2013 instead of 2014. The result would have been a higher payment to them. This 'transaction' as they (customs) see it, is as follows: somebody comes with a good which is 100% owned by him (the owner), added to that the decision not to leave (but to stay instead). By the time which went by, this good suddenly becomes owned by the state, unless of course, import duty and other taxes, which are forced upon the owner, are paid. When, and only when, the tax is paid, customs release YOUR good and you become again the owner. In conclusion: I will pay them 23,3% of what's already mine because the alternative is to have my property confiscated by them...\n\n<a id=\"taxation-1\" href=\"#taxation\"><img src=\"images/taxation.jpg\"></a><div class=\"lightbox\" id=\"taxation\"><a href=\"#taxation-1\"><span style=\"background-image: url('images/taxation.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "7a553504-e2df-5bcf-90f9-ed559fc3ae45",
+      "slug": "short-holiday-went-as-planned",
+      "title": "Short holiday went as planned",
+      "desc": "I navigated to Spain, rented a berth right next to Jebel Tariq (Gibraltar)",
+      "created": "2013-10-04",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/morocco_1b03728ec1.webp",
+      "content": "I spent my short holiday as planned. I navigated to Spain, rented a berth right next to Jebel Tariq (Gibraltar) and did some sightseeing in North-Morocco before heading back to Rabat. My boat stays berthed in Spain for the coming 3 months because of fiscal reasons. According to the calculation tables of Moroccan customs, my boat has her anniversary on January 1st which means import duty and VAT will be cheaper when importing the boat after the ongoing fiscal year has ended. Obviously I chose to do this way instead of handing over any of my money to the greedy Moroccan government. It would be irresponsible behavior as a head of my household to let myself being robbed without looking for a way to avoid it. Enough about the ever-occurring injustice of taxation, let's get to the pictures.\n\n<div></div>\n<a id=\"morocco-1\" href=\"#morocco\"><img src=\"images/morocco.jpg\"></a><div class=\"lightbox\" id=\"morocco\"><a href=\"#morocco-1\"><span style=\"background-image: url('images/morocco.jpg')\"></span></a></div>\n<a id=\"ferry-1\" href=\"#ferry\"><img src=\"images/ferry.jpg\"></a><div class=\"lightbox\" id=\"ferry\"><a href=\"#ferry-1\"><span style=\"background-image: url('images/ferry.jpg')\"></span></a></div>\n<a id=\"gibraltar-1\" href=\"#gibraltar\"><img src=\"images/gibraltar.jpg\"></a><div class=\"lightbox\" id=\"gibraltar\"><a href=\"#gibraltar-1\"><span style=\"background-image: url('images/gibraltar.jpg')\"></span></a></div>\n<a id=\"tetouan-1\" href=\"#tetouan\"><img src=\"images/tetouan.jpg\"></a><div class=\"lightbox\" id=\"tetouan\"><a href=\"#tetouan-1\"><span style=\"background-image: url('images/tetouan.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "6716b8ae-bc65-5b1a-b150-aacff9e43136",
+      "slug": "soon-taking-a-break-from-work",
+      "title": "Soon taking a break from work",
+      "desc": "I'm soon going to take a break from my work and navigate to Jebel Tariq (Gibraltar)",
+      "created": "2013-08-13",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/jebeltarik_18a7305ff5.webp",
+      "content": "The month of Ramadan has passed and temperatures average between 26 °C and 31 °C when the sun is at its highest point of the day.\n\nThis is my 10th month in Morocco and most of the time I'm here:\n\n<a id=\"work-1\" href=\"#work\"><img src=\"images/work.jpg\"></a><div class=\"lightbox\" id=\"work\"><a href=\"#work-1\"><span style=\"background-image: url('images/work.jpg')\"></span></a></div>\n\nI wish I were here:\n\n<a id=\"jebeltarik-1\" href=\"#jebeltarik\"><img src=\"images/jebeltarik.webp\"></a><div class=\"lightbox\" id=\"jebeltarik\"><a href=\"#jebeltarik-1\"><span style=\"background-image: url('images/jebeltarik.webp')\"></span></a></div>\n\nThe good news is I'm soon going to take a break from my work and navigate to Jebel Tariq (meaning \"Tariq's mountain\") named after Tariq ibn Ziyad. In the western world this place is better known as Gibraltar (Spanish derivation of the Arabic name). On the picture you can see the famous Rock of Gibraltar."
+    },
+    {
+      "id": "bdee242a-3f67-50c9-934a-7a0558a459f4",
+      "slug": "i-found-a-job-in-morocco",
+      "title": "I found a job in Morocco",
+      "desc": "I found a job in Morocco, so it seems I will not be doing long travels for at least one year",
+      "created": "2013-05-11",
+      "category": [
+        "job"
+      ],
+      "image": "images/myself_fc64125a73.webp",
+      "content": "It has been a long time since I wrote about my status so here we go:\n* I now have a Moroccan wife alhamdulillah and we have been living aboard for 3 months now!\n* I am not longer a Belgian resident, I have obtained Moroccan residency.\n* I paid my berthing place in the marina for one full year upfront.\n* I found a job in Morocco, so it seems I will not be doing long travels for at least one year.\n* I added meteorology and long distance radio communication to my learning program. Even though Arabic language is still my favorite. I want to prepare for an Atlantic crossing in the coming years (Brazil? South-Africa? Of course I still have Ziguinchor, Senegal in my memory).\n\nI end this update with a list of books I'm currently studying:\n* Heavy Weather Avoidance and Route Design\n* Météorologie tropicale : des alizés au cyclone. Tomes 1 et 2.\n* Ham Radio for Dummies\n* Banque de questions pour le certificat d'opérateur radioamateur\n\n<a id=\"myself-1\" href=\"#myself\"><img src=\"images/myself.jpg\"></a><div class=\"lightbox\" id=\"myself\"><a href=\"#myself-1\"><span style=\"background-image: url('images/myself.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "54219c7e-b348-5e94-962b-da272ce71871",
+      "slug": "morocco-unspoiled-and-growing",
+      "title": "Morocco, unspoiled and growing",
+      "desc": "About Morocco. It is still unspoiled and fast growing.",
+      "created": "2012-12-29",
+      "category": [
+        "travel"
+      ],
+      "image": "images/winter_3e3b14a163.webp",
+      "content": "This is a picture which shows a lot about Morocco. It is still unspoiled and fast growing. The seagulls don't mind their space taken by the construction workers in the background, they find their rest in the marina :D Around evening time, they will move back to their place when the machines are stopped.\n\n<a id=\"winter-1\" href=\"#winter\"><img src=\"images/winter.jpg\"></a><div class=\"lightbox\" id=\"winter\"><a href=\"#winter-1\"><span style=\"background-image: url('images/winter.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "6bc1a57a-152c-5690-84ce-8c5adcbdbd4d",
+      "slug": "making-friends",
+      "title": "Making friends",
+      "desc": "It is not me on the picture, it is a friend, although we look the same :)",
+      "created": "2012-12-19",
+      "category": [
+        "travel"
+      ],
+      "image": "images/markab_b2c4377794.webp",
+      "content": "I'm busy making friends and studying... I'm also looking at the possibility of using the boat as an office and start teaching English language in private. It is an easy way for me to obtain Moroccan residency and not of lesser importance, the 20% VAT tax normally enforced on importation of the boat has not to be paid. The VAT tax shifts to a quarterly payment calculated on my earnings which means I will Insha'Allah pay VAT taxes in small amounts, spread over the duration (of time) the boat is being used to earn income. Secondly, I'm looking into the formalities to set up my charter activity with the boat so I can do trips with tourists at the more than 3.000 km long Moroccan coast. My move to Senegal is not ruled out yet. I just want to stay some time in Morocco. I don't know how long, maybe just long enough to find a good wife :-)\n\n<a id=\"markab-1\" href=\"#markab\"><img src=\"images/markab.jpg\"></a><div class=\"lightbox\" id=\"markab\"><a href=\"#markab-1\"><span style=\"background-image: url('images/markab.jpg')\"></span></a></div>\n\nIt is not me on the picture, it is a friend, although we look the same :-) I took the picture."
+    },
+    {
+      "id": "045c013e-1503-52fa-b7d0-76deea318532",
+      "slug": "no-plans-yet-to-leave-sale",
+      "title": "No plans yet to leave Salé",
+      "desc": "My new telephone card now stores some thirty contacts I did not have since I arrived in Morocco two months ago.",
+      "created": "2012-11-27",
+      "category": [
+        "travel"
+      ],
+      "image": "images/sale.jpg",
+      "content": "Two weeks have passed since my last update. My new telephone card now stores some thirty contacts I did not have since I arrived in Morocco two months ago. I speak French with most of them, English with some of them and sometimes they turn out to be my Arabic teachers. Lately, my boat has become a floating library, I bought many written language courses and other Arabic literature including works about Islamic law. The only thing still missing is an Arabic wife :-D No plans yet to leave Salé.\n\n<a id=\"sale-1\" href=\"#sale\"><img src=\"images/sale.jpg\"></a><div class=\"lightbox\" id=\"sale\"><a href=\"#sale-1\"><span style=\"background-image: url('images/sale.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "fa2f176a-ce93-5f7d-99b1-c6a638d5e235",
+      "slug": "rainy-days-have-come",
+      "title": "Rainy days have come",
+      "desc": "I prefer to stay inside in my floating home on such days, to learn Arabic.",
+      "created": "2012-11-13",
+      "category": [
+        "travel"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "My (almost) daily routine here in Morocco is to go out and chat with my friends in the market, they work while I study Arabic. The many tea breaks, the sunshine and new people passing by make the day complete. Rainy days have come with wintertime. I prefer to stay inside in my floating home on such days to learn Arabic from satellite TV programs and beautiful Qoran recitations downloaded from Youtube like the one below. It is a heart touching chapter of the Qoran describing the creation we live in, recited with an awesome (masculin) voice, the images in the video speak for themselves.\n\n<iframe width=\"540\" height=\"304\" src=\"https://www.youtube.com/embed/am3r-q26B9U\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    {
+      "id": "cc30d818-abea-5b3d-883f-f784cb65ebe5",
+      "slug": "im-studying-the-arabic-language",
+      "title": "I'm studying the Arabic language",
+      "desc": "I'm studying Arabic while the EU gets the Nobel Peace/Farce Prize",
+      "created": "2012-10-15",
+      "category": [
+        "travel"
+      ],
+      "image": "images/nobel-farce-prize.webp",
+      "content": "\nكثير من أصدقائي هنا في المغرب يتحدثون اللغة العربية ,الحمد لله، وأنا أدرس اللغة العربية معهم\ntranslation: many of my friends here in Morocco speak the Arabic language, thank God, I'm studying the Arabic language with them. --- Don't forget to read the Arabic script from the right to the left :-D\n\nI also learnt about the news that the EU - which I love sooo much as you are aware of - has 'earned' the 2012 Nobel Peace Prize. I first thought it was a joke but it's not :-/ I would like to share the analysis of this event by Jim Rogers as broadcast on RT (Russian television).\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tmpG9rgH1EQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    },
+    {
+      "id": "6f606082-a03a-5d85-b2fc-72e75dea11db",
+      "slug": "authentic-lifestyle-of-sale",
+      "title": "Authentic lifestyle of Salé",
+      "desc": "Local people continue buying or offering me all kind of foods for free.",
+      "created": "2012-10-13",
+      "category": [
+        "travel"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "I'm tasting the authentic lifestyle in the old city centre of Salé. There's not a single bar in Salé but many tea houses and other public gathering places. I only went once to the modern capital city on the other side of the river. Local people continue buying or offering me all kind of foods for free. When have you last had a walk with someone who bought you milk or yoghurt a few moments before saying goodbye? Temperature here is a comfortable 25° C, most days are sunny, sometimes little cloudy, it has been 3 weeks people have seen rain here..."
+    },
+    {
+      "id": "b9de2ca7-6a7c-56b5-b0af-c9a265325325",
+      "slug": "life-in-morocco",
+      "title": "Life in Morocco",
+      "desc": "Understanding life in Morocco, it's a beautiful way of life.",
+      "created": "2012-10-07",
+      "category": [
+        "travel"
+      ],
+      "image": "images/fishermen.jpg",
+      "content": "After having experienced life in Morocco for 6 days now, I'm taking the time to write an update. My first meeting with Moroccan people took place 15 miles before the port of my entry into Morocco. A fisherman made signs to invite me over so I approached. The ocean was very calm so I did a little chat with the crew and captain. After they heard my greetings in Arabic language, they doubled the quantity of sardines and shrimps they were planning to offer me. I made a picture of this awesome meeting.\n\n<div></div>\n<a id=\"fishermen-1\" href=\"#fishermen\"><img src=\"images/fishermen.jpg\"></a><div class=\"lightbox\" id=\"fishermen\"><a href=\"#fishermen-1\"><span style=\"background-image: url('images/fishermen.jpg')\"></span></a></div>\n<a id=\"fish-1\" href=\"#fish\"><img src=\"images/fish.jpg\"></a><div class=\"lightbox\" id=\"fish\"><a href=\"#fish-1\"><span style=\"background-image: url('images/fish.jpg')\"></span></a></div>\n\nThe same kind of generosity is part of the lifestyle here. A few days ago, I went for a seat in a tea house, I had not started to drink my tea yet and the lady of the house offered me two of her own made cookies. She commented I was very welcome in 'al maghreb' (Morocco). In order to understand this behaviour of politeness and generosity, it is important to know about hasanaat.\n\nHasanaat (plural) is a unit of measure received by a muslim when doing a good deed. Muslims work to a higher goal in this life, they strive for the reward of the afterlife. They work every day of their life to secure this reward by earning/saving hasanaat. On the Day of Reckoning, each muslim will witness the weighing of his own deeds. His earned hasanaat will be balanced against the total of his committed sins. The result of this weighing will determine if the muslim will or wil not enter paradise.\n\nEach human being has its own 'record' where all good deeds and all bad deeds are recorded. The Quran describes this 'record' as two books with an appointed administrator (angel) for each of both.\n\nHasanaat can be earned very easily, e.g. with the tongue by speaking good words or e.g. with the hands by doing a good deed (an action according to the will of God) like feeding another human being. Even the feeding of an animal makes a muslim earn hasanaat.\n\nBecause human beings tend to forget very easily all the good that has been done to them (by their Creator), He, the One that created us, made a law stipulating that we should stand in prayer 5 times a day so we do not forget why we are here.\n\nWith all this in mind, you are now able to understand life in Morocco, it's a beautiful way of life."
+    },
+    {
+      "id": "edeba0b5-8b8c-5449-aa15-3c308cf716cc",
+      "slug": "arrived-at-rabat-morocco",
+      "title": "Arrived at Rabat, Morocco",
+      "desc": "Arrived at the capital of Morocco, Rabat.",
+      "created": "2012-10-06",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/rabat1.jpg",
+      "content": "Arrived at the capital of Morocco, Rabat.\n\n<div></div>\n<a id=\"rabat-1\" href=\"#rabat1\"><img src=\"images/rabat1.jpg\"></a><div class=\"lightbox\" id=\"rabat1\"><a href=\"#rabat-1\"><span style=\"background-image: url('images/rabat1.jpg')\"></span></a></div>\n<a id=\"rabat-2\" href=\"#rabat2\"><img src=\"images/rabat2.jpg\"></a><div class=\"lightbox\" id=\"rabat2\"><a href=\"#rabat-2\"><span style=\"background-image: url('images/rabat2.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "0d9eb923-0aae-5625-8bd2-6cf3dc382832",
+      "slug": "moving-around-in-kenitra",
+      "title": "Moving around in Kenitra",
+      "desc": "Moving around on land, with a friend",
+      "created": "2012-10-05",
+      "category": [
+        "travel"
+      ],
+      "image": "images/porto.jpg",
+      "content": "I don't write many updates at the moment so that must mean I'm too busy living life here. This place is amazing. You can choose your lifestyle here, you can choose to live the European way and you can live the African way here. Insha'Allah when I find the time I will explain in detail. I have been moving around in Kenitra with a Belgian/Moroccan friend Murad who has a house and a car here. Tomorrow Insha'Allah, I will move to the city of Rabat which is located only a 4 hours trip away. I plan to leave the boat safe and secured in the marina and to continue touring with Murad. In the meanwhile I'm making arrangements with my (almost) brother Ibrahim who lives in Senegal, he will travel Insha'Allah to meet me here in Morocco so we can sail together back to his home town Ziguinchor, Insha'Allah.\n\nMy Senegalese friends from Porto (Portugal) have sent me the following picture. The dish as seen on the picture is the famous Tiéboudiène (riz au poisson / rice and fish).\n\n<a id=\"porto-1\" href=\"#porto\"><img src=\"images/porto.jpg\"></a><div class=\"lightbox\" id=\"porto\"><a href=\"#porto-1\"><span style=\"background-image: url('images/porto.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "ce15ecfa-70bb-5483-9ead-e823d987d9fb",
+      "slug": "arrived-at-kenitra-morocco",
+      "title": "Arrived at Kenitra, Morocco",
+      "desc": "Arrived at Kenitra, Morocco!",
+      "created": "2012-10-01",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/kenitra.jpg",
+      "content": "Arrived at Kenitra, Morocco!\n\n<a id=\"kenitra-1\" href=\"#kenitra\"><img src=\"images/kenitra.jpg\"></a><div class=\"lightbox\" id=\"kenitra\"><a href=\"#kenitra-1\"><span style=\"background-image: url('images/kenitra.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "84edc4ea-3a2e-502e-b532-2ad1dd46e8bd",
+      "slug": "farewell-europe",
+      "title": "Farewell Europe!",
+      "desc": "I'm now leaving the Portuguese coast, Insha'Allah never to turn back on my steps.",
+      "created": "2012-09-30",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "Farewell Europe! I'm now leaving the Portuguese coast, Insha'Allah never to turn back on my steps. I made the switch, my heart is attached to Africa now :-) See you on the African continent :-D"
+    },
+    {
+      "id": "9d1960e3-b14c-5bbf-b851-a47ab64b5213",
+      "slug": "from-belgium-to-algarve",
+      "title": "From Belgium to Algarve",
+      "desc": "I spent some time making a trail of my voyage up until now. You can have a virtual visit to any place I went by zooming in on the below map.",
+      "created": "2012-09-25",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/from-belgium-to-algarve.webp",
+      "content": "I'm enjoying a free wifi signal reaching several hundreds metres into this sea area. Alhamdulillah. I spent some time making a trail of my voyage up until now. You can have a virtual visit to any place I went by zooming in on the below map.\n\n<iframe class=\"alltrails\" src=\"https://www.alltrails.com/widget/recording/from-belgium-to-the-west-african-coast--2?u=i\" width=\"100%\" height=\"400\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" title=\"AllTrails: Trail Guides and Maps for Hiking, Camping, and Running\"></iframe>"
+    },
+    {
+      "id": "53720931-2465-564a-8917-68a1e09665e1",
+      "slug": "culatra-island",
+      "title": "Culatra island",
+      "desc": "I found a perfect spot to spend the following days until a stable weather window arrives.",
+      "created": "2012-09-24",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/algarve.jpg",
+      "content": "I found frozen fries, halal meat, chocolate, a mosque and an African community in the under-construction town of Albufeira. The name of the town has an obvious Arabic tone but I'm still in Portugal! Just as the name of the town is a sign of past times, old-style trading still takes place here. I'm talking about the traditional markets as they are known in all Arabic countries, see this link.\n\nAfter a comfortable night in the luxurious marina, I spent another night anchored before the beach of Albufeira. It was horrible because of the Atlantic swell. I got shaken up the whole night. This morning, I found a perfect spot, Culatra island, to spend the following days until a stable weather window arrives so I can LEAVE EUROPE.\n\n<div></div>\n<a id=\"algarve-1\" href=\"#algarve\"><img src=\"images/algarve.jpg\"></a><div class=\"lightbox\" id=\"algarve\"><a href=\"#algarve-1\"><span style=\"background-image: url('images/algarve.jpg')\"></span></a></div>\n<a id=\"culatra-1\" href=\"#culatra\"><img src=\"images/culatra.jpg\"></a><div class=\"lightbox\" id=\"culatra\"><a href=\"#culatra-1\"><span style=\"background-image: url('images/culatra.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "db7255b3-8509-524d-97d5-686cece5849a",
+      "slug": "i-sailed-past-cape-st-vincent",
+      "title": "I sailed past Cape St. Vincent",
+      "desc": "I sailed past Cabo de Sao Vicente (Cape St. Vincent) which is the most south-western tip of Portugal.",
+      "created": "2012-09-22",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/capestvincent.jpg",
+      "content": "Further east, following the coast, I entered the famous Algarve region. The Algarve is known for its warm and calm mediterranean-like climate.\n\n<a id=\"capestvincent-1\" href=\"#capestvincent\"><img src=\"images/capestvincent.jpg\"></a><div class=\"lightbox\" id=\"capestvincent\"><a href=\"#capestvincent-1\"><span style=\"background-image: url('images/capestvincent.jpg')\"></span></a></div>\n\nWhile rounding this cape, I had this feeling I cannot describe in words. I realized that I had arrived to the point where I could set sail in one straight line to the African continent and finally LEAVE EUROPE, Whenever I wanted to, I could, it had never been that close... leaving Europe behind me and start a new life. One 20 (or 30) hour trip away, just one! I could be in Africa within a long day! That was the kind of thinking I had. But I first needed to stock up on fresh food and water so I did not leave Europe yet, but I could! And I will Insha'Allah, in the coming days or weeks :-D\n\nJust another one thing: let's not get into radical thinking :-) it is true that I hate capitalism and I hate government as organized in Europe. I also hate many facets of the European way of life but I do like European products like my boat for example. In the future I will Insha'Allah voyage to Europe to visit my family or buy some European products which I cannot find in Africa. It would be radical to say that, in the future, I would not want to put any of my feet once again on the European continent. Though, such a language does describe correctly how I feel :-) I just cannot describe the joy I feel when thinking about my emigration plan in the process of becoming reality."
+    },
+    {
+      "id": "186063fb-739e-568c-b381-a83481082575",
+      "slug": "discovering-cascais",
+      "title": "Discovering Cascais",
+      "desc": "Bank offices, a Jaguar car dealer, many breakfast bars and restaurants, but nowhere, nowhere to find a simple supermarket or mini-market!",
+      "created": "2012-09-20",
+      "category": [
+        "travel"
+      ],
+      "image": "images/cascais-marina.jpg",
+      "content": "This morning, I moored on the fuel pontoon to fill up on gas oil. I had to wait for an hour until opening time so I went for a walk discovering Cascais.\n\nIt was a strange experience. I was looking for a supermarket, mini-market or whatever place where I could buy food to store in my fridge.\nAfter a 45 minutes walk I had passed more than FORTY bank offices, a Jaguar car dealer, many breakfast bars and restaurants, a school, public buildings with people forming a row before (yes, it had something to do with taxes), but nowhere, nowhere to find a simple supermarket or mini-market! I was wondering if I was the exception here in this small city, was I actually the only one taking care of his own food instead of going out to eat in a bar or restaurant? This small city located at the Atlantic ocean, grown out of a small fishing village, is one of the most flagrant examples of today's European capitalist society.\nI'm sure half of its population works either for a bank or for the government and I estimate some 99% of all money slushing around in this small city must come from financial speculation or the collection on more 'traditional' interest-based investments, both of them can be classified as usury. The remaining 1% of money circulating in this small city would be the hard earned savings from the working class which is needed, of course, to serve the rich usury-practicing millionaires after they withdrew big amounts of cash in one of the many, MANY bank offices here to find.\nI end my anti-capitalism rant right here :-)\n\n<a id=\"cascais-marina-1\" href=\"#cascais-marina\"><img src=\"images/cascais-marina.jpg\"></a><div class=\"lightbox\" id=\"cascais-marina\"><a href=\"#cascais-marina-1\"><span style=\"background-image: url('images/cascais-marina.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "c5a25487-9d91-5e01-828c-2a7905a0eb4d",
+      "slug": "cascais-anchorage",
+      "title": "Cascais anchorage",
+      "desc": "I'm surrounded by another 40 sailing boats who all dropped their anchor and have a relaxed stay while exploring",
+      "created": "2012-09-19",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "After 3 trips during daylight - which is losing its dominance to the night time in this period of the year - I reached Cascais. Cascais was an old fishing village and has now become one of the richest towns in Portugal because of its location at the Atlantic Ocean and its vast and relatively untouched piece of coastline which attracts many tourists. It is located 10 kilometres from Lisbon and it is just a short train ride away. Pictures will follow later Insha'Allah.\n\nI'm now anchored in the bay just next to the very expensive marina. I'm surrounded by another 40 sailing boats who all dropped their anchor and have a relaxed stay while exploring, the very close by, capital city of Portugal.\n\nI anchored next to the Dutch couple I met at an earlier anchorage. I hope they are reading my blog so I can thank them with this message for the fresh sardines they gave me. I just threw them in the pan with lots of oil and they were delicious. I very much liked our last conversation when we talked about the son of the captains lady, she talked about her son and how he became a 9/11 truther, just like I once was."
+    },
+    {
+      "id": "956642ca-eb5c-5acc-ab57-4896c75ca5d6",
+      "slug": "24-c-at-6-oclock",
+      "title": "24°C breeze at 6 o'clock",
+      "desc": "I was astonished to feel warm air entering the windows at 6 o'clock in the morning, I could not believe the feel of its comfort.",
+      "created": "2012-09-16",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/landbreeze.webp",
+      "content": "Because of the (warm) Portuguese mainland cooling off during the night, and this happening considerably faster than the ocean during night time, the airmass above the mainland moves seaward because of the difference in air pressure caused by this phenomenon. Sailors know this mechanism as land breeze. Land breeze is the opposite of the sea breeze we all experience at the beach during the day in summertime when fresh air moves to landward.\n\nWhen I arrived my first day, here at the west-coast of Portugal, I was astonished by the local climate. When I woke up at 6 o'clock for the morning prayer, I was expecting, as usual in northern Europe, to have my teeth together, trying to survive what should normally be the coldest period of the day, around dawn. I was astonished to feel warm air entering the windows and I could not believe the feel of its comfort. I took my thermometer and it showed 24 degrees Celsius!\n\nThat was two weeks ago and this hot land breeze coming in through the windows repeated itself many times. What a nice climate! Hot days and warm air coming in at night :)\n\nToday was another day.\n\nThis warm land breeze passing over my boat at night finds itself above the ocean close to shore. When this air mass starts cooling off above the relatively cold ocean, the temperature change of this air is an obvious result. If dew point is passed, this air mass looses its capacity to hold the same amount of moist. The result of this is the forming of fog. This advection fog, occurring 10% of the times here at the west-coast of Portugal, is the most hated thing for seaman because sight near the shore is reduced to almost zero.\n\nToday was such a day and there was virtually no wind to blow the fog to landward. I occasionally saw the sun and some junior sailors trying to make the best out of this foggy day.\n\nI spent the day eating and reading. Since I'm now on the Iberian peninsula, this was an excellent moment to continue reading my book about the history of this piece of the earth. Islam has been dominant for 500 years here in Portugal.\n\nI can feel this in the behaviour of Portuguese people. They still posses a little piece of the illumination which has been removed in the 17th century by the horrors of the Spanish inquisition when the many Muslims of the Iberian peninsula faced two options: convert to Christianity or be killed! Sadly, most Spanish and Portuguese people today don't know that their ancestors were probably Muslims.\n\nTo end this update, I would like to share a paragraph I was reading today:\n\n> When Cordoba was at the height of its flowering there were over 200,000 houses in the city, along with six hundred mosques, nine hundred public baths, fifty hospitals and several large markets which catered for all branches of trade and commerce including 15,000 weavers.\n> You could walk through her streets for ten miles in one direction at night, and always have the lights of lamps to guide your way. Seven hundred years later this would be an innovation in London or Paris, as would paved streets."
+    },
+    {
+      "id": "5589ebaf-1a36-58ec-ba99-15ded55cec69",
+      "slug": "no-favourable-wind",
+      "title": "No favourable wind",
+      "desc": "Life is still good here in Matosinhos on this closing day of the summer season. I'm spending all my time outside these days",
+      "created": "2012-09-15",
+      "category": [
+        "travel"
+      ],
+      "image": "images/matosinhos.jpg",
+      "content": "Life is still good here in Matosinhos on this closing day of the summer season.\nI'm spending all my time outside these days, not having a camera nearby, so that means I can only offer pictures which are related to the sea.\n\n<a id=\"matosinhos-1\" href=\"#matosinhos\"><img src=\"images/matosinhos.jpg\"></a><div class=\"lightbox\" id=\"matosinhos\"><a href=\"#matosinhos-1\"><span style=\"background-image: url('images/matosinhos.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "95efd7b3-405b-5dc9-87e1-86a236fd6c47",
+      "slug": "exploring-matosinhos",
+      "title": "Exploring Matosinhos",
+      "desc": "Life is good here in Matosinhos, Portugal. I'm doing some unusual stuff",
+      "created": "2012-09-12",
+      "category": [
+        "travel"
+      ],
+      "image": "images/jerome.jpg",
+      "content": "I'm now in Portugal, enjoying summer life here in Matosinhos. I spent many days anchored before Matosinhos beach.\n\nI went twice to the city of Porto, which is only located 10 km away, to buy food and pray in the mosque. I'm still awaiting the good winds but I don't mind they didn't arrive yet:-)\n\nI'm doing some unusual stuff like:\n\n- swimming to the beach and spending a lazy day with my Portuguese and Senegalese friends\n\n- having my [six-week-out-of-the-box-and-already-rusty Chinese bike](https://nabicicleta.com/2012/09/11/uma-nordic-bike-que-sabe-velejar) repaired,\n\n- walking two kilometres through the city with all my dirty clothes on my back\n\n- explaining the female lifeguards on the beach that the proper dress code should be like this: arms and legs covered :-)\n\nPortuguese people are extremely friendly, open minded and helpful. The guy that repaired my bike did not want my money, even after I insisted I wanted to pay him for his service, he was happy with the smile, coffee and boat visit I offered him. Surely, this kind of social interaction is not liked by our capitalist leaders, they must hate it when people in the streets practice other than their capitalistic system.\n\n<a id=\"jerome-1\" href=\"#jerome\"><img src=\"images/jerome.jpg\"></a><div class=\"lightbox\" id=\"jerome\"><a href=\"#jerome-1\"><span style=\"background-image: url('images/jerome.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "ad69f521-a1e6-57b3-9e11-4fece854a25a",
+      "slug": "islas-cies-most-white-beaches-ive-seen",
+      "title": "Islas Cies, most white beaches I've seen",
+      "desc": "I walked on the most white beaches I experienced in my life.",
+      "created": "2012-09-03",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/Cies6.jpg",
+      "content": "I have been offline for some days. I continued my voyage and took a day off on the beautiful Island Islas Cies. There, I walked on the most white beaches I experienced in my life. Here are some pictures.\n\n<div></div>\n<a id=\"cies-1\" href=\"#cies1\"><img src=\"images/Cies1.jpg\"></a><div class=\"lightbox\" id=\"cies1\"><a href=\"#cies-1\"><span style=\"background-image: url('images/Cies1.jpg')\"></span></a></div>\n<a id=\"cies-2\" href=\"#cies2\"><img src=\"images/Cies2.jpg\"></a><div class=\"lightbox\" id=\"cies2\"><a href=\"#cies-2\"><span style=\"background-image: url('images/Cies2.jpg')\"></span></a></div>\n<a id=\"cies-3\" href=\"#cies3\"><img src=\"images/Cies3.jpg\"></a><div class=\"lightbox\" id=\"cies3\"><a href=\"#cies-3\"><span style=\"background-image: url('images/Cies3.jpg')\"></span></a></div>\n<a id=\"cies-4\" href=\"#cies4\"><img src=\"images/Cies4.jpg\"></a><div class=\"lightbox\" id=\"cies4\"><a href=\"#cies-4\"><span style=\"background-image: url('images/Cies4.jpg')\"></span></a></div>\n<a id=\"cies-5\" href=\"#cies5\"><img src=\"images/Cies5.jpg\"></a><div class=\"lightbox\" id=\"cies5\"><a href=\"#cies-5\"><span style=\"background-image: url('images/Cies5.jpg')\"></span></a></div>\n<a id=\"cies-6\" href=\"#cies6\"><img src=\"images/Cies6.jpg\"></a><div class=\"lightbox\" id=\"cies6\"><a href=\"#cies-6\"><span style=\"background-image: url('images/Cies6.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "9339d9cf-8298-5895-bc72-fbbbdd75edd3",
+      "slug": "santa-cristina-beach",
+      "title": "Santa Cristina beach",
+      "desc": "I'm still at anchor before Santa Cristina beach located south-east of the city-centre of A Coruña",
+      "created": "2012-08-30",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "I'm still at anchor before the Santa Cristina beach located south-east of the city-centre of A Coruña. I'm connected with a free wifi from a nearby hotel :-D Today, I looked for (and found) a mosque, after a one hour walk crossing the city centre in a sublime sunny and windy climate. Alhamdulillah. Tomorrow Insha'Allah I will return to the mosque for performing the Friday prayer. I met several Senegalese brothers in and around the mosque today and we arranged to have tea together, tomorrow after the Friday prayer."
+    },
+    {
+      "id": "c0a349de-922a-52be-9bab-09799f6d58c4",
+      "slug": "provisioning-at-a-coruna",
+      "title": "Provisioning at A Coruña",
+      "desc": "I went for a long walk in A Coruña and bought some materials",
+      "created": "2012-08-29",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "Yesterday I arrived at A Coruña. A city which is rich in history and a famous place of arrival for sailors. I managed to leave the Bay of Biscay behind me well before autumn when (severe) gales are more frequent. In summertime, there is almost no such chance. Now, I'm awaiting the northerly trade winds which prevail during summertime here at the Atlantic coast of the Iberian peninsula. These would be very favorable conditions, the wind in the back.\n\nI did some calculations: 1.050 nautical miles done, another 2.300 to Ziguinchor.\n\nToday, I went for a long walk in the city and bought some materials so I am now fully equiped with my second anchor set. There is always a possibility an anchor gets stuck and cannot be recovered so a second anchor set is a must have."
+    },
+    {
+      "id": "829aaa86-3ecb-50e3-8db0-8425ae55ae49",
+      "slug": "ria-de-cedeira",
+      "title": "Ria de Cedeira",
+      "desc": "Two nights ago, I anchored in a protected aluminium harbour surrounded by hills full of trees.",
+      "created": "2012-08-27",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/portino-de-moras.jpg",
+      "content": "Two nights ago, I anchored in a protected aluminium harbour surrounded by hills full of trees. An aluminium factory was built in the surrounding forests. Of course this location was chooses for geographical reasons, it makes sense to install an industrial port in deep water with protected surroundings so the incoming ships can be safely moored. I found a nice picture on the web showing the surroundings:\n\n<a id=\"portino-de-moras-1\" href=\"#portino-de-moras\"><img src=\"images/portino-de-moras.jpg\"></a><div class=\"lightbox\" id=\"portino-de-moras\"><a href=\"#portino-de-moras-1\"><span style=\"background-image: url('images/portino-de-moras.jpg')\"></span></a></div>\n\nYesterday, I continued for a short 5 hour passage to the Ria de Cedeira. Today, I'm taking a day off for site-seeing. No need to say that the many time I spent alone, made me do some deep thinking. About our current system which is making it almost impossible for us today to experience true freedom. This freedom-preventing system could be best called 'the modern state'. Years of study and real life experiences added to that drove me to that conclusion. I'm not going to write about the core activities of the modern state here in this blog, it is upon each of us to do our own research.\n\nI end this update with a picture of the anchorage at Ria de Cedeira where I arrived yesterday.\n\n<a id=\"cedeira-1\" href=\"#cedeira\"><img src=\"images/cedeira.jpg\"></a><div class=\"lightbox\" id=\"cedeira\"><a href=\"#cedeira-1\"><span style=\"background-image: url('images/cedeira.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "e8f29170-cf9a-56f0-9db9-bee7b1b3404a",
+      "slug": "bay-of-biscay",
+      "title": "Bay of Biscay",
+      "desc": "A very strong breeze and wind gusts, no rain, at bay of Biscay",
+      "created": "2012-08-24",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/biscay.webp",
+      "content": "Because of the many beautiful (and free) anchorages which are located in the - now very nearby - Spanish Rias, I decided to leave the (expensive) marina of Gijón even though a strong breeze/near gale (without rain forecast) would pass because of the 70th (or something) Atlantic depression coming over. These Atlantic depressions usually have their centre above the Atlantic and are moving inland above Ireland or the UK. Then, most of the time, they slowly move east over Europe until they dissolve. Because of the high number of such depressions in this summer of 2012, the sun has been absent on many, many days in Belgium where I started my voyage. Now I'm in northern Spain and those very same depressions reach this zone with their outer limits. This was the forecast for today: in the afternoon, for some period of 3 hours (I estimated), a strong breeze with wind gusts up to 30 knots (55km/h), no rain. That means 'near gale' conditions according to the Beaufort scale. The weather would pass over from west to east while I needed to head from east to west which makes it a shorter 'stay' in the bad weather because you get faster through the bad-weather-zone. I decided to go. A few weeks ago I had encountered a half-an-hour rain shower and I read 35 knots on the wind meter and the boat behaved very good (only mainsail, head sail furled/rolled in).\n\nI had an easy passage with lots of sun, yoghurt, reading, resting until 2 o'clock in the afternoon, I still had some estimated 5 hours to go and I was prepared. I had been checking air pressure on my barometer each half an hour to check if it was according to the forecasts. If not, I could seek refuge by anchoring in a harbour not too far away. Air pressure showed everything went as forecast. I continued. Though one picture says more than a thousand words, the experience is not realistically captured in only a few pictures. Alhamdulillah, my boat is perfectly up to such conditions. Here we go to some images while the strong breeze/near gale came over.\n\n<a id=\"august-24\" href=\"#august24\"><img src=\"images/august24.webp\"></a><div class=\"lightbox\" id=\"august24\"><a href=\"#august-24\"><span style=\"background-image: url('images/august24.webp')\"></span></a></div>\n\nAlhamdulillah, I'm know safe and comfortably in Ria de Ribadeo.\n\nInsha'Allah, I will take several days of time now to do little trips westward and wait for the northerly winds to settle. That way, I can enjoy an easy passage southbound discovering the Spanish and Portuguese west coast."
+    },
+    {
+      "id": "22c7c718-783b-5be3-8730-20290af6ca8a",
+      "slug": "gijon",
+      "title": "Gijón",
+      "desc": "I motored (no wind so no sails) past the 2.650m high Picos de Europa",
+      "created": "2012-08-23",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/picos.jpg",
+      "content": "I left Santander an hour before sunrise so I could make it to Gijón before the evening. I motored (no wind so no sails) past the 2650m high Picos de Europa. Most of the time its upper part is covered with clouds while at sea, the sun tries to get through the lower clouds which results in a sunny but hazy weather. The haze that was floating in the air was a very nice refreshment in the hot afternoon.\n\n<a id=\"picos-1\" href=\"#picos\"><img src=\"images/picos.jpg\"></a><div class=\"lightbox\" id=\"picos\"><a href=\"#picos-1\"><span style=\"background-image: url('images/picos.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "2a62db2d-b4c0-588d-8c33-e7ed6ee04138",
+      "slug": "day-of-rest",
+      "title": "Day of rest",
+      "desc": "It was a special experience, my first time I spent a complete night on the ocean.",
+      "created": "2012-08-22",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/santander.jpg",
+      "content": "Day of rest, I needed a long sleep because the night before while I was crossing the Bay of Biscay, I had to set my portable kitchen alarm every 20 minutes so I could have an eye on my radar screen or put my head outside and screen for lights (=ships) on the horizon. It was a special experience, my first time I spend a complete night on the ocean. I enjoyed the calm condition of the water and the sky beautified with thousands of stars, but you can imagine how I started to feel because of the lack of sleep. I think I did a total of some 30 little naps of less than 20 minutes. A cheese pizza before sunrise and a hot shower just after sunrise made me feel a bit more like normal.\n\nToday, I filled up on gas oil and skipped going to the marina. I read some reports they charge something like above 40 euro's a night. I'm now anchored before the 'promenade', I read somewhere Santander is the 16th populated Spanish city. Lots of people move around here, especially in this month of August.\n\nIn the city I looked for an internet connection and for a mosque, it has been too long for me I went praying in the mosque and I felt the need for some social contact.\n\n<a id=\"santander-1\" href=\"#santander\"><img src=\"images/santander.jpg\"></a><div class=\"lightbox\" id=\"santander\"><a href=\"#santander-1\"><span style=\"background-image: url('images/santander.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "6945c478-fbee-5ea7-9c47-d7a7b7210113",
+      "slug": "arrived-in-santander-spain",
+      "title": "Arrived in Santander, Spain",
+      "desc": "llega a España - arrived in Spain - wasaltu fil andalus",
+      "created": "2012-08-21",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/santander1-cover.webp",
+      "content": "llega a España - arrived in Spain - wasaltu fil andalus\nClick on the picture for high resolution.\n\n<a id=\"santander-1\" href=\"#santander1\"><img src=\"images/santander1.webp\"></a><div class=\"lightbox\" id=\"santander1\"><a href=\"#santander-1\"><span style=\"background-image: url('images/santander1.webp')\"></span></a></div>"
+    },
+    {
+      "id": "7bb3e271-0bd9-5ab7-8919-7d6e9f4e01e3",
+      "slug": "port-joinville-ile-dyeu",
+      "title": "Ile d'Yeu",
+      "desc": "I headed into the pitoresque town of Port Joinville (Ile d'Yeu) on this Sunday morning to buy food.",
+      "created": "2012-08-19",
+      "category": [
+        "travel"
+      ],
+      "image": "images/chocolate.jpg",
+      "content": "I Arrived at île d'Yeu which means I entered the Bay of Biscay. Spain is now only a 212 nautical miles away. Tomorrow Insha'Allah, I will decide if I go straight in an estimated 30 hour leg to reach the Spanish port of Santander. Alternatively, I could descend further south into the direction of La Rochelle and Rochefort.\n\nI headed into the pitoresque town of Port Joinville (Ile d'Yeu) on this Sunday morning to buy food. The little narrow streets, the white painted houses and the old cars on the supermarket parking space are proof of another, more laid back, lifestyle, a difference from life on the European continent. Ile d'Yeu is a small island (with airport and ferry terminal) and from a conversation in the supermarket, I understood some people here don't consider themselves French. They consider themselves 'island dwelling people' (my own formulation).\n\nWhen I returned to the boat, I chatted online with another Belgian sailor who had just entered the port of Rabat (Morocco). He left Belgium in the beginning of this sailing season.\n\nToday is the end of the fasting month Ramadan. I celebrated this by eating some tasty dates, full of (healthy) sugar. Actually, since I became a traveller 19 days ago, I have done nothing else than that, eating lots of sugars, in order to stay concentrated while navigating. That means I need to catch up 18 days of fasting when I have ended my long voyage.\n\n<a id=\"chocolate-1\" href=\"#chocolate\"><img src=\"images/chocolate.jpg\"></a><div class=\"lightbox\" id=\"chocolate\"><a href=\"#chocolate-1\"><span style=\"background-image: url('images/chocolate.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "d662d72b-e24d-5e4f-944e-ca924c721bc6",
+      "slug": "ile-de-groix",
+      "title": "Ile de Groix",
+      "desc": "I looked for a protected anchorage at the north-east side of Ile de Groix",
+      "created": "2012-08-17",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/iledegroix.jpg",
+      "content": "This morning, I left Bénodet and by evening, I looked for a protected anchorage at the north-east side of Ile de Groix. Here is a picture.\n\n<a id=\"iledegroix-1\" href=\"#iledegroix\"><img src=\"images/iledegroix.jpg\"></a><div class=\"lightbox\" id=\"iledegroix\"><a href=\"#iledegroix-1\"><span style=\"background-image: url('images/iledegroix.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "1c9b129a-45f5-5106-a6cd-b82eaf522c7c",
+      "slug": "my-second-day-in-benodet",
+      "title": "My second day in Bénodet",
+      "desc": "I stay where I am, on the beautiful and calm river and in the protection of the surrounding forests.",
+      "created": "2012-08-15",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/sailing03.jpg",
+      "content": "My second day in Bénodet. A strong breeze with chance of a near gale is expected here today. I stay where I am, on the beautiful and calm river and in the protection of the surrounding forests. Tomorrow will be too early to move on because of a 3 metre swell occurring on the Atlantic on days after strong winds.\nThat means I'm stuck here for another two days. It looks like a crossing of the Bay of Biscay is not ideal in the coming week neither, so I will Insha'Allah be heading south discovering South-Brittany.\n\nThe friendly German couple I mentioned earlier made some fantastic pictures while I was leaving the anchorage of Camaret-sur-mer. They don't have a blog yet but maybe soon they will have one too. Here are the pictures:\n\n<div></div>\n<a id=\"sailing-1\" href=\"#sailing01\"><img src=\"images/sailing01.jpg\"></a><div class=\"lightbox\" id=\"sailing01\"><a href=\"#sailing-1\"><span style=\"background-image: url('images/sailing01.jpg')\"></span></a></div>\n<a id=\"sailing-2\" href=\"#sailing02\"><img src=\"images/sailing02.jpg\"></a><div class=\"lightbox\" id=\"sailing02\"><a href=\"#sailing-2\"><span style=\"background-image: url('images/sailing02.jpg')\"></span></a></div>\n<a id=\"sailing-3\" href=\"#sailing03\"><img src=\"images/sailing03.jpg\"></a><div class=\"lightbox\" id=\"sailing03\"><a href=\"#sailing-3\"><span style=\"background-image: url('images/sailing03.jpg')\"></span></a></div>\n<a id=\"sailing-4\" href=\"#sailing04\"><img src=\"images/sailing04.jpg\"></a><div class=\"lightbox\" id=\"sailing04\"><a href=\"#sailing-4\"><span style=\"background-image: url('images/sailing04.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "cf7d4af4-ab48-5145-b745-2630cd33179b",
+      "slug": "raz-de-sein",
+      "title": "Raz de Sein",
+      "desc": "I rounded the famous passage \"Raz de Sein\"",
+      "created": "2012-08-13",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/sailing05.jpg",
+      "content": "I rounded the famous passage \"Raz de Sein\".\n\n<a id=\"sailing-5\" href=\"#sailing05\"><img src=\"images/sailing05.jpg\"></a><div class=\"lightbox\" id=\"sailing05\"><a href=\"#sailing-5\"><span style=\"background-image: url('images/sailing05.jpg')\"></span></a></div>\n\nThis picture was taken by a friendly German couple who I met earlier in Camaret-sur-mer. I was sailing there today, in summertime, you don't want to be there in the month of December; see for yourself on Youtube:\n\n<iframe width=\"560\" height=\"304\" src=\"https://www.youtube.com/embed/m7RSryuJAwE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\nAfter having passed Raz de Sein, I headed to the town of Bénodet. I sailed up the river beneath the 28m high bridge. The most beautiful sailing area I have seen up to this day. I took a mooring buoy like which there are hundreds on the river. Calm water, finally! See the picture below.\n\n<a id=\"benodet-1\" href=\"#benodet\"><img src=\"images/benodet.jpg\"></a><div class=\"lightbox\" id=\"benodet\"><a href=\"#benodet-1\"><span style=\"background-image: url('images/benodet.jpg')\"></span></a></div>\n"
+    },
+    {
+      "id": "34d19790-6cdf-5551-8627-8aa4f953645d",
+      "slug": "arrived-at-audierne",
+      "title": "Arrived at Audièrne",
+      "desc": "I spent the night at anchor and the Atlantic swell entering the bay made my night a horrible one",
+      "created": "2012-08-12",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/audierne.jpg",
+      "content": "Arrived at Audièrne, I can't tell much about Audièrne because I spent the night at anchor. What I do know is that the Atlantic swell entering the bay made my night a horrible one. That's why I definitely wanted to leave that place in the morning. It could have been an idyllic anchorage as the surroundings where very nice as you can see on the picture below.\n\n<a id=\"audierne-1\" href=\"#audierne\"><img src=\"images/audierne.jpg\"></a><div class=\"lightbox\" id=\"audierne\"><a href=\"#audierne-1\"><span style=\"background-image: url('images/audierne.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "221871c8-f054-5946-8d5d-2f249d38e8db",
+      "slug": "manche-area",
+      "title": "Manche area",
+      "desc": "I sailed with the wind in the back for more than 8 hours and arrived at Camaret-sur-mer",
+      "created": "2012-08-10",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/manche.jpg",
+      "content": "I left early in the morning, after the morning prayer when the sky is still black at 5:15h (Roscoff). I sailed with the wind in the back for more than 8 hours at a speed of 5 knots which is very acceptable seen the heavy load of my boat (I'm moving to Africa) and the lack of a whisker pole (boat equipment). In the evening I arrived at Camaret-sur-mer and anchored close to the marinas. Life is cheap this way. I don't pay anything and I can stay as long as I want. Now I have a choice to make, wait for an Atlantic high pressure zone so I can Insha'Allah safely and comfortably cross the bay of Biscay or descend further south into South-Brittany.\nThis is one of my last trips in the Manche area. It is not always grey sky and a cold wind. I got lucky this time. See this picture.\n\n<a id=\"manche-1\" href=\"#manche\"><img src=\"images/manche.jpg\"></a><div class=\"lightbox\" id=\"manche\"><a href=\"#manche-1\"><span style=\"background-image: url('images/manche.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "cf4dc25d-891e-55c7-a64c-56a3a6b5d391",
+      "slug": "roscoff-town-and-marina",
+      "title": "Roscoff, town and marina",
+      "desc": "I arrived at Roscoff marina approaching the most western point of France, Camaret-sur-mer, known as a gathering place for sailors",
+      "created": "2012-08-08",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/roscoff.jpg",
+      "content": "I arrived at Roscoff marina approaching the most western point of France, Camaret-sur-mer known as a gathering place for sailors, nearby the port of Brest.\n\nThe marina in Roscoff is still under construction, no electricity and wifi yet, but half price! I visited the town of Roscoff to buy food, to look for a wifi zone and will be taking a day of rest.\n\nI also took time for studying Arabic and learn more about the muslim way of life, it is the month of Ramadan and every muslim should be spending time on learning his religion in this month, the reward for it is great, in this life and in the afterlife. \n\n<a id=\"roscoff-1\" href=\"#roscoff\"><img src=\"images/roscoff.jpg\"></a><div class=\"lightbox\" id=\"roscoff\"><a href=\"#roscoff-1\"><span style=\"background-image: url('images/roscoff.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "05bf7a29-be75-50c9-a9e1-2af82eefa23b",
+      "slug": "sark-island",
+      "title": "Sark island",
+      "desc": " I'm looking forward to anchor at Dixcart Bay located on the beautiful island Sark which is one of the five islands in the English channel",
+      "created": "2012-08-07",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/sark.jpg",
+      "content": "Leaving Cherbourg for a short leg of an estimated 5 hours sailing. I will pass through the Alderney Race which is a passage famous for its strong currents. Up to 7 knots (13km/h). I'm looking forward to anchor at Dixcart Bay located on the beautiful island Sark which is one of the five islands in the English channel. More info on this [website](https://www.sark.co.uk).\n\n<a id=\"sark-1\" href=\"#sark\"><img src=\"images/sark.jpg\"></a><div class=\"lightbox\" id=\"sark\"><a href=\"#sark-1\"><span style=\"background-image: url('images/sark.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "c2f26cc1-91f7-584f-86ba-b51ffc40c604",
+      "slug": "arrived-at-cherbourg",
+      "title": "Arrived at Cherbourg",
+      "desc": "Saturday night, I anchored at sea in the protection of Cap d'Antifer and a long breakwater",
+      "created": "2012-08-06",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/capdantifer.jpg",
+      "content": "Arrived at the marina in Cherbourg. Saturday night, I anchored at sea in the protection of Cap d'Antifer and a long breakwater, you can find the picture below. Last night I anchored just before the marina close by the military port. The standard procedure for the military is to call all ships anchored close by so I answered them very politely on the radio. They just asked my boat name, nothing more. With my last trip done, 10% of my voyage (in distance) to West-Africa is already behind me. Wind direction has not been favorable, most sailors know about it, you need to get out of the English channel which means south-westerly direction and the prevailing winds in summertime are, yes, south-sesterly, which means burning diesel at the same time while the sails are up (if possible at all). In my case, it took me 130 liters of diesel so far. I dream every night of the northerly winds which I will meet Insha'Allah in Spain and Portugal. After my night anchorage before the marina, I entered the marina to fill up on fuel and food. An English couple saw me handling the boat and started a conversation, they said they found it quite a challenge to sail single-handedly to West-Africa. I answered them I find it quite a challenge to build myself a future on the European continent.\n\n<a id=\"capdantifer-1\" href=\"#capdantifer\"><img src=\"images/capdantifer.jpg\"></a><div class=\"lightbox\" id=\"capdantifer\"><a href=\"#capdantifer-1\"><span style=\"background-image: url('images/capdantifer.jpg')\"></span></a></div>\n<a id=\"capdantifer-2\" href=\"#capdantifer2\"><img src=\"images/capdantifer2.jpg\"></a><div class=\"lightbox\" id=\"capdantifer2\"><a href=\"#capdantifer-2\"><span style=\"background-image: url('images/capdantifer2.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "495048eb-4b72-5fcc-9e98-f2e538ba2d1c",
+      "slug": "arrival-at-dieppe",
+      "title": "Arrival at Dieppe",
+      "desc": "After my return to the boat my only crew member informed me he's returning home, I can call myself a solo sailor now",
+      "created": "2012-08-03",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/dieppe.jpg",
+      "content": "Arrival at Dieppe, a pleasant port with lots of commercial activity in the many shopping streets. I bought some food and filled up a reserve can with gasoil. After my return to the boat my only crew member informed me he's returning home. Had the weather been better, he would have stayed, he told me. That means that I can call myself a solo sailor now. Allah s.w.t decided this is the appropriate time for me to handle things alone now. I plan to do a big trip tomorrow with anchorage at the side of a protecting wall neighbouring a petroleum port at Cap d'Antifer. The next day I will sail Insha'allah to Cherbourg. This picture can give you an idea how some sailors get discouraged to continue sailing.\n\n<div></div>\n<a id=\"dieppe-1\" href=\"#dieppe\"><img src=\"images/dieppe.jpg\"></a><div class=\"lightbox\" id=\"dieppe\"><a href=\"#dieppe-1\"><span style=\"background-image: url('images/dieppe.jpg')\"></span></a></div>\n<a id=\"dieppe-2\" href=\"#dieppe2\"><img src=\"images/dieppe2.jpg\"></a><div class=\"lightbox\" id=\"dieppe2\"><a href=\"#dieppe-2\"><span style=\"background-image: url('images/dieppe2.jpg')\"></span></a></div>"
+    },
+    {
+      "id": "ad08e5ab-0647-5cc8-843f-13597bb969af",
+      "slug": "leaving-belgium-today",
+      "title": "Leaving Belgium today!",
+      "desc": "Wind conditions are favorable, South/South-East. We leave early in the morning because stormy weather could occur in the evening.",
+      "created": "2012-08-01",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/no-image_1f995f270b.webp",
+      "content": "Finally leaving Belgium today! Yesterday I made arrangements with crew member Juan. We will be sailing together Insha'Allah. I'm a 30 year young converted muslim and Juan is a 55 year old Ph.D. Philosophy and we both love sailing and we both hate capitalism and big parasitic government. In the past, we both were productive state property (tax paying citizens) but, for now, we have stopped being that. I'm still open for another crew member (only men)!\n\nWind conditions are favorable, South/South-East. We leave early in the morning because stormy weather could occur in the evening."
+    },
+    {
+      "id": "1b6217e3-53ab-58cc-a832-01ee2f983d39",
+      "slug": "maintenance-and-arrangements",
+      "title": "Maintenance and arrangements",
+      "desc": "Preparing the boat, making arrangements with the only crew member",
+      "created": "2012-07-11",
+      "category": [
+        "sailing"
+      ],
+      "image": "images/maintenance.jpg",
+      "content": "Preparing the boat, solar panels are installed now, making arrangements with the only crew member, a 2nd crew member (only men) is most welcome!\n\n<div></div>\n<a id=\"solar-1\" href=\"#solar\"><img src=\"images/solar.jpg\"></a><div class=\"lightbox\" id=\"solar\"><a href=\"#solar-1\"><span style=\"background-image: url('images/solar.jpg')\"></span></a></div>\n<a id=\"maintenance-1\" href=\"#maintenance\"><img src=\"images/maintenance.jpg\"></a><div class=\"lightbox\" id=\"maintenance\"><a href=\"#maintenance-1\"><span style=\"background-image: url('images/maintenance.jpg')\"></span></a></div>\n<br></br>\n\n[The boat and its equipment](/myboat)"
+    }
+  ],
+  "about": {
+    "title": "About Me",
+    "infoHtml": "<p><strong>IT generalist, web developer</strong>\n, +13y. enterprise IT employment in Morocco, ex-shop owner (consumer IT). I develop web applications with focus on clean design, usability and quality.</p>",
+    "stack": [
+      "IT / APPLICATION SUPPORT",
+      "BACK-OFFICE AUTOMATION",
+      "PROGRAMMING",
+      "WEB DEVELOPMENT",
+      "DEVOPS",
+      "DATABASES",
+      "TESTING",
+      "COMMUNICATION",
+      "LANGUAGES (NL/FR/EN)",
+      "KNOWLEDGE MGT."
+    ],
+    "image": "images/profile-picture.webp",
+    "toolset": [
+      [
+        "mysql.svg",
+        "MySQL"
+      ],
+      [
+        "windows.svg",
+        "Windows Server"
+      ],
+      [
+        "microsoft.svg",
+        "Hyper-V"
+      ],
+      [
+        "docker.svg",
+        "Docker"
+      ],
+      [
+        "powershell.svg",
+        "Bash/Powershell"
+      ],
+      [
+        "linux.svg",
+        "Linux"
+      ],
+      [
+        "apache.svg",
+        "Apache"
+      ],
+      [
+        "icloud.svg",
+        "Cloud infrastructure"
+      ],
+      [
+        "git.svg",
+        "Git"
+      ],
+      [
+        "server.svg",
+        "Tomcat"
+      ],
+      [
+        "apachemaven.svg",
+        "Maven"
+      ],
+      [
+        "java.svg",
+        "Java"
+      ],
+      [
+        "spring.svg",
+        "Spring"
+      ],
+      [
+        "opencode.svg",
+        "OpenCode"
+      ],
+      [
+        "visualstudiocode.svg",
+        "VS Code"
+      ],
+      [
+        "googlechrome.svg",
+        "Chrome DevTools"
+      ],
+      [
+        "selenium.svg",
+        "Selenium"
+      ],
+      [
+        "postman.svg",
+        "Postman"
+      ],
+      [
+        "jenkins.svg",
+        "Jenkins"
+      ],
+      [
+        "userauthentication.svg",
+        "Keycloak"
+      ],
+      [
+        "elasticsearch.svg",
+        "Elasticsearch"
+      ],
+      [
+        "node-red.svg",
+        "Node-RED"
+      ],
+      [
+        "rocketchat.svg",
+        "RocketChat"
+      ],
+      [
+        "jira.svg",
+        "JIRA"
+      ],
+      [
+        "openapiinitiative.svg",
+        "Swagger"
+      ]
+    ],
+    "sideProjects": [
+      "**Web development:** Java / Spring / React, I'm developing [#web applications](#/projects) for knowledge workers, for educators, for entrepreneurs.",
+      "**IT infrastructure:** [Local AI](#ai-pc-2026) / AWS / Hyper-V / Linux / Docker / Networking"
+    ]
+  },
+  "myboat": {
+    "title": "My boat",
+    "infoHtml": "<p>The popular <strong>Jeanneau Sun Odyssey 45 DS</strong> yacht, built from 2007 until 2011, combines stylish lines and a class-leading interior with excellent headroom and natural light.\nIt's a yacht ideal for comfortable cruising and longer periods afloat.\nThe large cockpit easily accommodates 10 or more people.\nMy yacht has the 75hp engine, the preferred twin aft cabin layout, offering three double sleeping cabins, a generous galley, owner's suite forward and an aft head which I converted to storage room.\nInventory items: bow thruster, diesel heating, an extra pair of Tape-Drive carbon reinforced sails (in new state), autopilot, chart plotter, radar, AIS and mounted solar panels.</p>",
+    "image": "images/sailing04.jpg"
+  },
+  "voyages": {
+    "intro": "During the summer of 2012 I departed from Belgium. I experienced some fantastic sailing in France, Spain and Portugal. Two months later, I arrived in Morocco. I'm now living with my wife and children, two steps away from the Moroccan capital, in Salé.",
+    "slides": [
+      [
+        "marinasalex.jpg",
+        "I sailed from Belgium to Morocco and started a new life in Morocco."
+      ],
+      [
+        "sale-marina.jpg",
+        "I'm now berthed two steps away from the Moroccan capital city, in Salé."
+      ],
+      [
+        "kenitrax.jpg",
+        "North of my current position I have been navigating upriver to the city of Kenitra."
+      ],
+      [
+        "dakhla-mouillagex.jpg",
+        "South of my current position awaits an amazing surrounding.... Dakhla. When? Allahu a3lam."
+      ],
+      [
+        "moroccox.jpg",
+        "A past holiday: North-Morocco and Spain."
+      ],
+      [
+        "gibraltarx.jpg",
+        "I rented a berth right next to Jebel Tariq (Gibraltar)."
+      ],
+      [
+        "tangerportx.jpg",
+        "One year later, I toured in North-Morocco (Tanger)."
+      ],
+      [
+        "smir2.jpg",
+        "And navigated further to Marina Smir."
+      ],
+      [
+        "albughaz2017x.jpg",
+        "Last summer, North-Morocco again (Smir)..."
+      ],
+      [
+        "tanger2017x.jpg",
+        "This time with both children (Tanger)."
+      ],
+      [
+        "sailing03x.jpg",
+        "This is an experience I cannot describe in a few words..."
+      ],
+      [
+        "ciesx.jpg",
+        "At times you reach places where no car can come (Cies)."
+      ],
+      [
+        "biscayx.jpg",
+        "But sometimes the sea gets rough (Biscay)."
+      ],
+      [
+        "algarvex.jpg",
+        "At other times there is no better place to be (Algarve)."
+      ],
+      [
+        "maintenancex.jpg",
+        "And sometimes the boat keeps you busy with... maintenance."
+      ],
+      [
+        "rabatx.jpg",
+        "I'm now living aboard with my family..."
+      ],
+      [
+        "lifeaboard4x.webp",
+        "As we have been living for the past 7 years."
+      ],
+      [
+        "lifeaboard9x.webp",
+        "“I don't know much about the sea yet, but I like being out there.”"
+      ]
+    ]
+  }
+}

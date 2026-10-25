@@ -1,0 +1,6 @@
+# build output (regenerate with: python build.py)
+dist/
+# build tooling: esbuild binary + extracted JSX (auto-downloaded/regenerated)
+tools/
+# raw Contentful scrape — source data only, never publish
+captured/
