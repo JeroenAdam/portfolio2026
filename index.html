@@ -82,7 +82,14 @@
 
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
     .section { padding: 4rem 0 3.5rem; }
-    .section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section.alt { background-color: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    /* Repeating tech-icon texture — the old Gatsby .bg-grey, recoloured to this
+       palette (navy on light surfaces, light slate on dark). Applied as a
+       background-image so it layers over whatever surface the section already has. */
+    /* The ?v= query is a cache-buster (_headers caches /svg/* for 30 days): bump it
+       whenever a pattern file changes, the same way the old ?background.svg?x53054 did. */
+    .bg-pattern { background-image: url("/svg/pattern-light.svg?v=2"); background-position: 50% 50%; background-repeat: repeat; background-size: 50px; }
+    html.dark .bg-pattern { background-image: url("/svg/pattern-dark.svg?v=2"); }
 
     .section-title { text-align: center; margin-bottom: 2.5rem; }
     .section-title h2 { font-size: 1.9rem; text-transform: uppercase; letter-spacing: 2px; display: inline-block; }
@@ -105,7 +112,7 @@
     .brand { color: #fff; display: flex; flex-direction: column; line-height: 1.15; }
     .brand strong { font-family: var(--font-head); font-size: clamp(1.05rem, 1.6vw, 1.35rem); letter-spacing: 1px; }
     .brand small { color: var(--accent); font-size: clamp(0.58rem, 0.9vw, 0.72rem); text-transform: uppercase; letter-spacing: 2px; }
-    .brand:hover { text-decoration: none; }
+    .brand:hover { color: #fff; text-decoration: none; }
 
     /* labels scale down with the viewport instead of wrapping; hamburger takes over at 900px */
     .main-nav ul { list-style: none; display: flex; gap: 0.375rem; }
@@ -131,7 +138,7 @@
     }
 
     /* ============================= hero ============================= */
-    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 60%, #0f1d30 100%); color: #fff; padding: 4.5rem 0 9rem; }
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 60%, #0f1d30 100%); color: #fff; padding: 7.5rem 0; }
     .hero-inner { display: flex; align-items: center; gap: 3.5rem; }
     .hero-info { flex: 1 1 auto; }
     .hero-info .arabic { font-size: 1.15rem; color: var(--accent); letter-spacing: 1px; }
@@ -432,9 +439,10 @@
       }
     }
     // Special cases: links in the Experience section that lead to a blog article
-    // (MLOps) or to the myboat page (sailboat). The target is remembered, so the
-    // "go back" button there uses browser history and the user lands exactly
-    // where they were (same page, same scroll, same experience tab).
+    // (MLOps) or to the myboat page (sailboat), and the blog cards of the home
+    // page's "My latest articles". The target is remembered, so the "go back"
+    // button there uses browser history and the user lands exactly where they
+    // were (same page, same scroll, same experience tab).
     // Chrome fires popstate on EVERY hash navigation (forward clicks included)
     // and asynchronously restores scroll on its own, racing the app. So: clicks
     // mark an intent; the hashchange handler decides whether that change was
@@ -451,7 +459,7 @@
     });
     const isHistoryNav = () => !lastChangeIntentional;
     try { history.scrollRestoration = "manual"; } catch (e) {}
-    function markJobsNav(e) {
+    function markReturnNav(e) {
       const a = e.target.closest("a");
       if (!a) return;
       let href = a.getAttribute("href") || "";
@@ -575,9 +583,9 @@
       );
     }
 
-    function BlogGrid({ posts, showIds }) {
+    function BlogGrid({ posts, showIds, onClick }) {
       return (
-        <div className="blogs-grid">
+        <div className="blogs-grid" onClick={onClick}>
           {posts.map(p => <BlogCard key={p.id} post={p} showId={showIds} />)}
         </div>
       );
@@ -651,7 +659,7 @@
                 </button>
               ))}
             </div>
-            <div className="job-panels" onClick={markJobsNav}>
+            <div className="job-panels" onClick={markReturnNav}>
               {jobs.map((j, i) => (
                 <div key={j.company} className={"job-panel" + (i === value ? "" : " hidden")} aria-hidden={i !== value}>
                   <h3>{j.position.split(/(\(side job\))/i).map((part, i) =>
@@ -672,7 +680,7 @@
 
     function ServicesSection({ services, children }) {
       return (
-        <section className="section">
+        <section className="section bg-pattern">
           <div className="wrap">
             <SectionTitle title="My skills" />
             <div className="services-grid">
@@ -726,10 +734,10 @@
               <a href="#/projects" className="btn center">projects</a>
             </div>
           </section>
-          <section className="section alt">
+          <section className="section alt bg-pattern">
             <div className="wrap">
               <SectionTitle title="My latest articles" />
-              <BlogGrid posts={latest} />
+              <BlogGrid posts={latest} onClick={markReturnNav} />
               <a href="#/blog" className="btn center">blog</a>
             </div>
           </section>
@@ -804,11 +812,11 @@
 
     function BlogListPage({ data }) {
       return (
-        <section className="section">
+        <section className="section bg-pattern">
           <div className="wrap">
             <SectionTitle title="blog" />
             <BlogGrid posts={data.blogs} showIds />
-            <a href="#/" className="btn center">go back</a>
+            <a href="#/" className="btn center" style={{ marginTop: "4rem" }}>go back</a>
           </div>
         </section>
       );
@@ -825,8 +833,8 @@
             <div className="date"><i className="fa-regular fa-calendar"></i>&nbsp; {post.created}</div>
             <Md className="prose" text={post.content} />
             {fromExperience
-              ? <button type="button" className="btn center" onClick={() => window.history.back()}>Go Back</button>
-              : <a href={"#/blog#" + post.slug} className="btn center">Go Back</a>}
+              ? <button type="button" className="btn center" style={{ marginTop: "4rem" }} onClick={() => window.history.back()}>Go Back</button>
+              : <a href={"#/blog#" + post.slug} className="btn center" style={{ marginTop: "4rem" }}>Go Back</a>}
           </div>
         </section>
       );
