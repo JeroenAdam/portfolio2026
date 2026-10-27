@@ -36,60 +36,90 @@
 
   <style>
     /* ============================= theme ============================= */
+    /* Palette adopted from sedomicilier.be. Every value below is one of the colours
+       in its design system; the token name it comes from is noted inline. */
     :root {
-      --navy: #1d3557;
-      --navy-dark: #16283f;
-      --blue: #2a6fb0;
-      --blue-dark: #1f5890;
-      --accent: #c8a951;
-      --ink: #2b2f36;
-      --muted: #64748b;
-      --heading: #1d3557;
+      --navy: #1576e1;          /* primary   — header, hero, captions, chrome */
+      --navy-dark: #0c4392;     /* deep blue — footer, mobile nav dropdown     */
+      --blue: #1576e1;          /* link      — their a { color }               */
+      --blue-dark: #0554ad;     /* their a:hover                               */
+      --blue-hover: #1576e1;    /* their a:hover colour, kept for light mode    */
+      --accent: #c8a951;        /* gold, as before                             */
+      /* Gold is invisible on the bright azure header (1.69:1), so the two marks
+         sitting on it use this lighter azure from their palette instead. */
+      --accent-chrome: #c2deff;
+      --ink: #2b2f33;
+      --muted: #525b62;         /* body                                        */
+      --heading: #191d20;       /* heading / dark                              */
       --surface: #ffffff;
       --bg: #ffffff;
-      --bg-alt: #f3f5f8;
-      --line: #dde3ea;
-      --btn: #2a6fb0;
-      --btn-hover: #1f5890;
-      --card-shadow: 0 2px 10px rgba(23, 43, 77, 0.08);
+      --bg-alt: #f5f7fb;        /* light-blue                                  */
+      --line: #d3dbe1;          /* divider                                     */
+      --btn: #1576e1;           /* primary                                     */
+      --btn-hover: #0068db;     /* azure-dark — buttons hover the same in both themes */
+      --scroll-top-hover: #0554ad;  /* chip keeps its own deeper hover in light mode */
+      /* Job tab buttons only. Navy dark, as asked; the active fill is navy in both
+         themes (white label 9.4:1). Dark mode only lifts the hover ink, because
+         navy on a dark card would be unreadable. */
+      --job-accent: #0c4392;
+      --job-active: #0c4392;
+      --card-shadow: 0 2px 10px rgba(10, 10, 10, 0.10);
       --radius: 6px;
       --font-head: "Source Sans 3", "Segoe UI", Arial, sans-serif;
       --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
     }
-    /* dark mode: same layout, darker surfaces. --navy / --navy-dark stay dark:
-       they are used as chrome (header, hero, footer, captions). */
+    /* dark mode: same layout, darker surfaces. The azure chrome (--navy /
+       --navy-dark) is brand colour and stays put in both themes; only the surfaces
+       and text change. Surfaces use their black/charcoal scale (#0e1012 /
+       #191d20 / #1f252b) and their *-dark text tokens. */
     html.dark {
-      --blue: #6ea9de;
-      --blue-dark: #92c1e8;
-      --ink: #c6cfdb;
-      --muted: #92a0b2;
-      --heading: #d9e2ee;
-      --surface: #1a232e;
-      --bg: #111821;
-      --bg-alt: #17202a;
-      --line: #2b3745;
-      --btn: #2d5f8d;
-      --btn-hover: #3a74a9;
+      --blue: #0d80ff;          /* azure  — 5.0:1 on --bg                      */
+      /* Their scale runs azure -> near-white azure-light with nothing in between,
+         so both link colours are derived midpoints of that pair (linear light).
+         Inverted: the deeper azure sits at rest and the paler one on hover, which
+         also puts dark mode in the same direction as light mode (deeper -> paler),
+         same 1.27:1 step. Other --blue consumers (icons, accents, dots, focus ring)
+         still use their real azure. */
+      --blue-dark: #5a94ff;   /* at rest   - 6.5:1 on --bg */
+      --blue-hover: #82a9ff;  /* on hover  - 8.2:1 on --bg */
+      --accent-chrome: #c2deff;
+      --ink: #d3dbe1;           /* divider                                     */
+      --muted: #81919d;         /* heading-dark                                */
+      --heading: #e7f2ff;       /* medium-blue                                 */
+      --surface: #1f252b;
+      --bg: #0e1012;
+      --bg-alt: #191d20;        /* dark                                        */
+      --line: #3c4c58;          /* divider-dark                                */
+      --btn: #1576e1;
+      --btn-hover: #0068db;     /* azure-dark                                  */
+      /* The scroll-to-top chip is chrome (azure in both themes). On the dark
+         surfaces it lights UP on hover instead of sinking: a brighter azure
+         (1.47:1 vs resting) that still holds the white chevron at 3.0:1. */
+      --scroll-top-hover: #2f96ff;
+      --job-accent: #0d80ff;  /* hover ink only; --job-active stays navy dark */
       --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-anchor: none; }
     body { font-family: var(--font-body); color: var(--ink); background: var(--bg); line-height: 1.65; transition: background-color 0.25s, color 0.25s; }
     img { max-width: 100%; height: auto; }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { color: var(--blue-dark); text-decoration: underline; }
+    /* Links are the inverse of the palette pair: the deeper colour at rest,
+       brightening to the other one on hover. Dark mode takes a shorter hover step
+       (--blue-hover) so it reads as a nudge rather than a colour swap. */
+    a { color: var(--blue-dark); text-decoration: none; }
+    a:hover { color: var(--blue-hover); text-decoration: underline; }
     h1, h2, h3, h4 { font-family: var(--font-head); color: var(--heading); line-height: 1.25; }
 
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
     .section { padding: 4rem 0 3.5rem; }
     .section.alt { background-color: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     /* Repeating tech-icon texture — the old Gatsby .bg-grey, recoloured to this
-       palette (navy on light surfaces, light slate on dark). Applied as a
+       palette (azure on light surfaces, azure on dark). Applied as a
        background-image so it layers over whatever surface the section already has. */
     /* The ?v= query is a cache-buster (_headers caches /svg/* for 30 days): bump it
        whenever a pattern file changes, the same way the old ?background.svg?x53054 did. */
-    .bg-pattern { background-image: url("/svg/pattern-light.svg?v=2"); background-position: 50% 50%; background-repeat: repeat; background-size: 50px; }
-    html.dark .bg-pattern { background-image: url("/svg/pattern-dark.svg?v=2"); }
+    .bg-pattern { background-image: url("/svg/pattern-light.svg?v=3"); background-position: 50% 50%; background-repeat: repeat; background-size: 50px; }
+    html.dark .bg-pattern { background-image: url("/svg/pattern-dark.svg?v=3"); }
 
     .section-title { text-align: center; margin-bottom: 2.5rem; }
     .section-title h2 { font-size: 1.9rem; text-transform: uppercase; letter-spacing: 2px; display: inline-block; }
@@ -111,18 +141,18 @@
     .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; padding: 0 clamp(1.25rem, 3vw, 2.5rem); }
     .brand { color: #fff; display: flex; flex-direction: column; line-height: 1.15; }
     .brand strong { font-family: var(--font-head); font-size: clamp(1.05rem, 1.6vw, 1.35rem); letter-spacing: 1px; }
-    .brand small { color: var(--accent); font-size: clamp(0.58rem, 0.9vw, 0.72rem); text-transform: uppercase; letter-spacing: 2px; }
+    .brand small { color: var(--accent-chrome); font-size: clamp(0.58rem, 0.9vw, 0.72rem); text-transform: uppercase; letter-spacing: 2px; }
     .brand:hover { color: #fff; text-decoration: none; }
 
     /* labels scale down with the viewport instead of wrapping; hamburger takes over at 900px */
     .main-nav ul { list-style: none; display: flex; gap: 0.375rem; }
     .main-nav a {
-      display: flex; align-items: center; gap: clamp(0.3rem, 0.7vw, 0.55rem); color: #dbe4ee; font-weight: 600;
+      display: flex; align-items: center; gap: clamp(0.3rem, 0.7vw, 0.55rem); color: #ebf4ff; font-weight: 600;
       font-size: clamp(0.9rem, 1.2vw, 1.1rem); text-transform: capitalize; white-space: nowrap;
       padding: 0.65rem clamp(0.4rem, 0.9vw, 0.85rem); border-bottom: 3px solid transparent;
     }
-    .main-nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.06); text-decoration: none; }
-    .main-nav a.active { color: #fff; border-bottom-color: var(--accent); }
+    .main-nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.12); text-decoration: none; }
+    .main-nav a.active { color: #fff; border-bottom-color: var(--accent-chrome); }
 
     .menu-toggle { display: none; background: none; border: 1px solid rgba(255, 255, 255, 0.4); color: #fff; font-size: 1.15rem; padding: 0.4rem 0.75rem; border-radius: var(--radius); cursor: pointer; }
     .header-actions { display: flex; align-items: center; gap: 0.5rem; }
@@ -138,16 +168,19 @@
     }
 
     /* ============================= hero ============================= */
-    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 60%, #0f1d30 100%); color: #fff; padding: 7.5rem 0; }
+    /* Deepened from sedomicilier's bright brand gradient to their deep-blue rung of
+       the same ladder (#0554ad / --navy-dark / #004494): white hero text goes from
+       4.46:1 to 7.3:1 and the mid stop tracks the footer colour. */
+    .hero { background: linear-gradient(141deg, #0554ad 0%, var(--navy-dark) 71%, #004494 100%); color: #fff; padding: 7.5rem 0; }
     .hero-inner { display: flex; align-items: center; gap: 3.5rem; }
     .hero-info { flex: 1 1 auto; }
     .hero-info .arabic { font-size: 1.15rem; color: var(--accent); letter-spacing: 1px; }
     .hero-info h1 { color: #fff; font-size: 3rem; margin: 0.35rem 0 1rem; }
     .hero-info .rule { width: 120px; height: 3px; background: var(--accent); margin-bottom: 1.2rem; }
     .hero-info h2 { color: #fff; font-size: 1.7rem; margin-bottom: 0.6rem; }
-    .hero-info h4 { color: #cfdae7; font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; }
+    .hero-info h4 { color: #ebf4ff; font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; }
     .hero-info h4 a { color: var(--accent); }
-    .hero-info h5 { color: #9fb2c8; font-weight: 400; font-style: italic; font-size: 1rem; margin-bottom: 1.6rem; }
+    .hero-info h5 { color: #c2deff; font-weight: 400; font-style: italic; font-size: 1rem; margin-bottom: 1.6rem; }
     .hero-img-wrap { flex: 0 0 304px; }
     .hero-img-wrap img { border-radius: var(--radius); }
     .hero .social-links { margin-top: 1.6rem; }
@@ -180,8 +213,8 @@
       background: var(--surface); border: 1px solid var(--line); color: var(--heading); font: 600 0.95rem var(--font-body);
       padding: 0.55rem 1.4rem; border-radius: var(--radius); cursor: pointer; transition: all 0.15s;
     }
-    .job-tab:hover { border-color: var(--blue); color: var(--blue); }
-    .job-tab.active { background: var(--btn); border-color: var(--btn); color: #fff; }
+    .job-tab:hover { border-color: var(--job-accent); color: var(--job-accent); }
+    .job-tab.active { background: var(--job-active); border-color: var(--job-active); color: #fff; }
     /* all panels stacked in one grid cell: container is always as tall as the
        tallest panel, so switching tabs never changes the section height */
     .job-panels { display: grid; }
@@ -206,7 +239,7 @@
     .project-photo a { display: block; cursor: zoom-in; position: relative; }
     .photo-zoom {
       position: absolute; right: 0.8rem; bottom: 0.8rem; width: 40px; height: 40px; border-radius: var(--radius);
-      background: rgba(29, 53, 87, 0.75); color: #fff; display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(12, 67, 146, 0.8); color: #fff; display: inline-flex; align-items: center; justify-content: center;
       font-size: 1.05rem; opacity: 0; transition: opacity 0.15s; pointer-events: none;
     }
     .project-photo a:hover .photo-zoom, .project-photo a:focus-visible .photo-zoom { opacity: 1; }
@@ -231,7 +264,7 @@
     @media (max-width: 900px) { .blogs-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .blogs-grid { grid-template-columns: 1fr; } }
     .blog-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); color: inherit; display: flex; flex-direction: column; scroll-margin-top: 90px; }
-    .blog-card:hover { text-decoration: none; box-shadow: 0 6px 18px rgba(23, 43, 77, 0.16); transform: translateY(-2px); transition: all 0.15s; }
+    .blog-card:hover { text-decoration: none; box-shadow: 0 6px 18px rgba(10, 10, 10, 0.16); transform: translateY(-2px); transition: all 0.15s; }
     /* same proportions as the old Gatsby cards: 368px wide x 15rem (240px) tall */
     .blog-card .cover { aspect-ratio: 368 / 240; background: var(--navy); overflow: hidden; }
     .blog-card .cover img { width: 100%; height: 100%; object-fit: cover; }
@@ -266,10 +299,10 @@
     /* ============================= voyages ============================= */
     .voyage-intro { max-width: 800px; margin: 0 auto 2rem; text-align: center; color: var(--muted); }
     .carousel { max-width: 960px; margin: 0 auto; position: relative; }
-    .carousel-frame { background: #000; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(23, 43, 77, 0.25); }
+    .carousel-frame { background: #000; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(10, 10, 10, 0.25); }
     .carousel-frame img { width: 100%; height: 540px; object-fit: cover; display: block; }
     .carousel-caption { background: var(--navy); color: #fff; text-align: center; padding: 0.9rem 3rem; font-family: var(--font-head); font-size: 1.05rem; }
-    .carousel-btn { position: absolute; top: 42%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.88); border: 0; color: #1d3557; width: 42px; height: 42px; border-radius: var(--radius); font-size: 1.1rem; cursor: pointer; }
+    .carousel-btn { position: absolute; top: 42%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.88); border: 0; color: #191d20; width: 42px; height: 42px; border-radius: var(--radius); font-size: 1.1rem; cursor: pointer; }
     .carousel-btn:hover { background: var(--accent); }
     .carousel-btn.prev { left: 12px; }
     .carousel-btn.next { right: 12px; }
@@ -282,6 +315,7 @@
     .split { display: flex; gap: 3rem; align-items: flex-start; }
     .split .photo { flex: 0 0 260px; }
     .split .photo a { display: block; cursor: zoom-in; position: relative; }
+    .split .photo.plain { flex: 0 0 180px; }   /* about-page photo: 180px, not the 260px column */
     .split .photo.plain img { border: 0; box-shadow: none; }
     .split .photo img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--card-shadow); }
     .split .content { flex: 1; }
@@ -323,11 +357,11 @@
       opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.15s ease;
     }
     .scroll-to-top.is-visible { opacity: 0.8; visibility: visible; pointer-events: auto; }
-    .scroll-to-top.is-visible:hover { opacity: 1; background: var(--blue); }
+    .scroll-to-top.is-visible:hover { opacity: 1; background: var(--scroll-top-hover); }
     @media (max-width: 767.98px) { .scroll-to-top { display: none; } }
 
     /* ============================= footer / misc ============================= */
-    .site-footer { background: var(--navy-dark); color: #cfdae7; padding: 1rem 0; text-align: center; }
+    .site-footer { background: var(--navy-dark); color: #ebf4ff; padding: 1rem 0; text-align: center; }
     .site-footer h4 { color: #fff; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; margin-bottom: 1rem; }
     .site-footer .social-links { justify-content: center; }
     .site-footer .social-links a { color: #fff; }
@@ -409,6 +443,19 @@
       .replace(/url\('(images\/|svg\/)/g, "url('/$1")
       .replace(/url\("(images\/|svg\/)/g, 'url("/$1')
       .replace(/url\((images\/|svg\/)/g, "url(/$1");
+    // Blog prose links out to other sites, so those open in a new tab. Only
+    // outbound URLs qualify: in-page anchors (the lightbox ids) and in-site
+    // routes (#/contact - the "contact me" link) have to stay in this tab.
+    const blankExternal = h => {
+      const doc = new DOMParser().parseFromString("<div>" + (h || "") + "</div>", "text/html");
+      doc.querySelectorAll("a[href]").forEach(a => {
+        if (/^(?:https?:)?\/\//i.test(a.getAttribute("href"))) {
+          a.setAttribute("target", "_blank");
+          a.setAttribute("rel", "noopener noreferrer");
+        }
+      });
+      return doc.body.firstChild.innerHTML;
+    };
     function scrollToTarget(frag) {
       if (frag) {
         const el = document.getElementById(frag);
@@ -476,9 +523,10 @@
     }
 
     /* ------------------------------------------------ Markdown helper --- */
-    function Md({ text, className }) {
+    function Md({ text, className, newTab }) {
       const html = marked.parse(text || "", { gfm: true });
-      return <div className={className} dangerouslySetInnerHTML={{ __html: absHtml(html) }} onClick={onContentClick} />;
+      const ready = absHtml(html);
+      return <div className={className} dangerouslySetInnerHTML={{ __html: newTab ? blankExternal(ready) : ready }} onClick={onContentClick} />;
     }
     function Html({ html, className }) {
       return <div className={className} dangerouslySetInnerHTML={{ __html: absHtml(html) }} onClick={onContentClick} />;
@@ -594,6 +642,11 @@
     function ProjectCard({ project }) {
       const slug = project.title.toLowerCase().replace(/ /g, "-").replace(/\//g, "").replace(/--+/g, "-");
       const demoUrl = project.url.startsWith("../") ? "#/" + project.url.slice(3).replace(/^\//, "") : project.url;
+      /* Demo links leave the site, so they open in a new tab - except the ones
+         that resolve to an in-site route (Collaboration Workspace points at the
+         /video page), which must stay in the same tab. */
+      const external = demoUrl.startsWith("../") || !demoUrl.startsWith("#/")
+        ? { target: "_blank", rel: "noopener noreferrer" } : {};
       return (
         <article className="project" id={slug}>
           {project.image && (
@@ -607,14 +660,14 @@
           <div className="project-info">
             <h3>{project.title}</h3>
             <div className="status">{project.url
-              ? project.status.split(/(\bdemo\b)/).map((part, i) => /^\bdemo\b$/.test(part) ? <a key={i} href={demoUrl}>{part}</a> : part)
+              ? project.status.split(/(\bdemo\b)/).map((part, i) => /^\bdemo\b$/.test(part) ? <a key={i} href={demoUrl} {...external}>{part}</a> : part)
               : project.status}</div>
             <Html className="project-desc" html={project.descriptionHtml} />
             <div className="stack-label">Tech stack</div>
             <StackTags items={project.stack} />
             <div className="project-links">
               {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i> Code</a>}
-              {project.url && <a href={demoUrl}><i className="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>}
+              {project.url && <a href={demoUrl} {...external}><i className="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>}
             </div>
           </div>
           {project.image && (
@@ -831,7 +884,7 @@
           <div className="wrap article">
             <h1>{post.title}</h1>
             <div className="date"><i className="fa-regular fa-calendar"></i>&nbsp; {post.created}</div>
-            <Md className="prose" text={post.content} />
+            <Md className="prose" text={post.content} newTab />
             {fromExperience
               ? <button type="button" className="btn center" style={{ marginTop: "4rem" }} onClick={() => window.history.back()}>Go Back</button>
               : <a href={"#/blog#" + post.slug} className="btn center" style={{ marginTop: "4rem" }}>Go Back</a>}

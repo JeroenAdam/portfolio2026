@@ -161,7 +161,7 @@
     {
       "title": "Content sharing platform",
       "featured": true,
-      "status": "Status: live on Talim.app - try the demo",
+      "status": "Status: live on Talim.app → demo",
       "descriptionHtml": "<p><strong>Description</strong>: web app allowing educators to search, discover, submit and share educational resources</p>\n<p><strong>Type of content</strong>: articles, documents, presentations, images, URLs, announcements</p>\n<p><strong>Use cases</strong>: browse educational resources, search &#x26; discover, store your resources, share w/ others</p>\n<p><strong>Key features</strong>: great search experience, relevant results, submit / upvote / share resources, favorites, saved searches, send feedback, intuitive editor, responsive design, user / moderator dashboards</p>",
       "github": "https://github.com/jeroenadam/content-sharing-platform",
       "url": "https://talim.app",
@@ -173,7 +173,7 @@
     {
       "title": "Personal knowledge mgmt. app",
       "featured": false,
-      "status": "Status: app is live - try the demo",
+      "status": "Status: app is live → demo",
       "descriptionHtml": "<p><strong>Description</strong>: my own PKM app allows me to store, structure and retrieve knowledge/information</p>\n<p><strong>Type of content</strong>: text, images, files, URLs, videos...</p>\n<p><strong>Use cases</strong>: store of knowledge for learning or research, store of work procedures, structure your notes, personalized workspace</p>\n<p><strong>Key features</strong>: note-taking on any device, browse by tags, links/backlinks, fast search, file uploads, media preview, progress tracking, diff view, recent history, recycle bin, responsive UI, backups, self-hosted</p>",
       "github": "https://github.com/JeroenAdam/my-personal-knowledge-management-system",
       "url": "https://knowledge.adambahri.com",
@@ -199,7 +199,7 @@
       "featured": false,
       "status": "This is the website you are visiting now",
       "descriptionHtml": "<p><strong>Description</strong>: a portfolio website showcasing my IT projects + personal blog</p>\n<p><strong>Type of content</strong>: pages, articles, pictures, videos</p>\n<p><strong>Use cases</strong>: present myself and my voyages. As I'm also the author, a modern workflow, minimal maintenance, easily add/edit content</p>\n<p><strong>Key features</strong>: basic portfolio components + blog / content &amp; structure adjustable with an AI agent / responsive layout / light &amp; dark theme / slideshow component / image viewer / contact form / static hosting</p>",
-      "github": "",
+      "github": "https://github.com/JeroenAdam/portfolio2026",
       "url": "",
       "stack": [
         "React - JavaScript - Netlify - GitHub"
