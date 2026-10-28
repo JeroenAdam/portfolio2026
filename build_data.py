@@ -190,7 +190,7 @@ data = {
         "headline": "IT Generalist | Web Developer",
         "authorOf": "author of Talim.app",
         "talimUrl": "https://talim.app",
-        "note": "(and working remotely aboard my sailboat)",
+        "note": "(in Morocco)",
         "heroImage": "images/hero-img.avif",
         "heroImageFallback": "images/hero-img.png",
         "email": "info@adambahri.com",

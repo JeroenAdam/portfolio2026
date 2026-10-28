@@ -10,7 +10,7 @@
     "headline": "IT Generalist | Web Developer",
     "authorOf": "author of Talim.app",
     "talimUrl": "https://talim.app",
-    "note": "(and working remotely aboard my sailboat)",
+    "note": "(in Morocco, self-employed)",
     "heroImage": "images/hero-img.avif",
     "heroImageFallback": "images/hero-img.png",
     "email": "info@adambahri.com",
@@ -83,33 +83,33 @@
   "services": [
     {
       "id": 1,
-      "icon": "fa-solid fa-screwdriver-wrench",
-      "title": "IT / APPLICATION SUPPORT",
-      "text": "(8y.) Handling a business-critical app (+500 users), former service desk tech lead (5y.)."
-    },
-    {
-      "id": 2,
-      "icon": "fa-solid fa-server",
-      "title": "DEVOPS / CLOUD",
-      "text": "Infra/server mgmt., scripting, low-code, API integration, CI/CD, ChatOps, MLOps."
-    },
-    {
-      "id": 3,
-      "icon": "fa-solid fa-database",
-      "title": "DATABASES",
-      "text": "Handling SQL databases on a daily basis, building queries, backup/restore tasks."
-    },
-    {
-      "id": 4,
       "icon": "fa-solid fa-code",
       "title": "PROGRAMMING / TESTING",
       "text": "Java / Spring / JavaScript / React / Node.js. Test automation, manual testing."
     },
     {
-      "id": 5,
+      "id": 2,
       "icon": "fa-solid fa-mug-hot",
       "title": "WEB DEVELOPMENT",
       "text": "Developing web applications, for knowledge workers, for educators, for entrepreneurs."
+    },
+    {
+      "id": 3,
+      "icon": "fa-solid fa-server",
+      "title": "DEVOPS / CLOUD",
+      "text": "Infra/server mgmt., scripting, low-code, CI/CD, ChatOps, MLOps."
+    },
+    {
+      "id": 4,
+      "icon": "fa-solid fa-gears",
+      "title": "BACK-OFFICE AUTOMATION",
+      "text": "Automating repetitive internal workflows, API integrations."
+    },
+    {
+      "id": 5,
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "title": "IT / APPLICATION SUPPORT",
+      "text": "(8y.) Handled a business-critical app (500+ users), former service desk tech lead (5y.)."
     },
     {
       "id": 6,
@@ -122,13 +122,12 @@
     {
       "company": "Pepper One",
       "position": "IT Generalist",
-      "date": "14/09/2018 - Present",
+      "date": "14/09/2018 - 31/10/2026",
       "duration": "8y.",
       "desc": [
-        "**Application support**: handling a business-critical app (+500 users)",
-        "**DevOps**: automating the software development workflow, managing infra, [ChatOps](#/projects#collaboration-workspace), [MLOps](#/blogs/building-an-enterprise-ai-environment)",
-        "**Web development**: adding new features to our business application",
-        " **Databases**: handling MySQL daily, building queries",
+        "**Application support**: handled a business-critical app (500+ users)",
+        "**DevOps**: automated the software development workflow, managed infra, [ChatOps](#/projects#collaboration-workspace), [MLOps](#/blogs/building-an-enterprise-ai-environment)",
+        "**Web development**: added new features to my employer's product",
         "**Testing**: test automation, manual testing",
         "**Communication**: with customers, dev team and product owner"
       ]
@@ -139,7 +138,7 @@
       "date": "14/05/2013 - 13/09/2018",
       "duration": "5y.",
       "desc": [
-        "Coordinating the operations within a Service Desk team (+5.000 end-users)",
+        "Coordinated the operations within a Service Desk team (5.000+ end-users)",
         "I created a self-help tool, a **[Skill Matrix](#/skillmatrix)**, for Service Desk agents",
         "Incident handling (5y.) / SPOC for team members (4,5y.) and customer (3y.) / Knowledge mgmt. (3y.) / SLA reporting (2y.)"
       ]
@@ -217,8 +216,8 @@
       "category": [
         "LEARNING"
       ],
-      "image": "images/polished17.webp",
-      "content": "The web app I am developing allows educators to browse, discover, submit and share educational resources such as articles, documents, presentations, etc. The web app will help educators facilitate children's learning.\n\n<a id=\"sideproject-1\" href=\"#sideproject\"><img src=\"images/sideproject1.webp\"></a><div class=\"lightbox\" id=\"sideproject\"><a href=\"#sideproject-1\"><span style=\"background-image: url('images/sideproject1.webp')\"></span></a></div>\n\nSo far, I've completed the research and design phase and I developed a **[basic prototype](https://login.adambahri.com:1112/realms/jhipster/protocol/openid-connect/auth?response_type=code&client_id=web_app&redirect_uri=https://app.adambahri.com:1114&login_hint=user&password=user)**.\n\nI am currently working on the UI (React). As for the backend, I'm progressing with features such voting and favorites.\n\nThere are quite some other features still to be done. I'll continue working on the filters, navigation, moderation, notifications and user/moderator dashboards. I'm planning for even a better search experience by adding semantic search and a better editor with inbuilt note-taking.\n\n<a id=\"sideproject-2\" href=\"#sideproject2\"><img src=\"images/sideproject2.webp\"></a><div class=\"lightbox\" id=\"sideproject2\"><a href=\"#sideproject-2\"><span style=\"background-image: url('images/sideproject2.webp')\"></span></a></div>\n\nI'm not in a hurry so there is no timeline, eventually I'll publish educational resources that are relevant to me but for now I'm focusing on the technical aspects. Maybe one day I'll create an online community.\n\nFuture plans: integrate a Large Language Model for better discoverability of educational resources.\n\nThat's all I have for now. If this project interests you, don’t hesitate to [contact me](#/contact)."
+      "image": "images/talimv1.webp",
+      "content": "The web app I am developing allows educators to browse, discover, submit and share educational resources such as articles, documents, presentations, etc. The web app will help educators facilitate children's learning.\n\n<a id=\"sideproject-1\" href=\"#sideproject\"><img src=\"images/sideproject1.webp\"></a><div class=\"lightbox\" id=\"sideproject\"><a href=\"#sideproject-1\"><span style=\"background-image: url('images/sideproject1.webp')\"></span></a></div>\n\nSo far, I've completed the research and design phase and I developed a **[basic prototype](https://login.adambahri.com:1112/realms/jhipster/protocol/openid-connect/auth?response_type=code&client_id=web_app&redirect_uri=https://web.talim.app&login_hint=user&password=user)**.\n\nI am currently working on the UI (React). As for the backend, I'm progressing with features such voting and favorites.\n\nThere are quite some other features still to be done. I'll continue working on the filters, navigation, moderation, notifications and user/moderator dashboards. I'm planning for even a better search experience by adding semantic search and a better editor with inbuilt note-taking.\n\n<a id=\"sideproject-2\" href=\"#sideproject2\"><img src=\"images/sideproject2.webp\"></a><div class=\"lightbox\" id=\"sideproject2\"><a href=\"#sideproject-2\"><span style=\"background-image: url('images/sideproject2.webp')\"></span></a></div>\n\nI'm not in a hurry so there is no timeline, eventually I'll publish educational resources that are relevant to me but for now I'm focusing on the technical aspects. Maybe one day I'll create an online community.\n\nFuture plans: integrate a Large Language Model for better discoverability of educational resources.\n\nThat's all I have for now. If this project interests you, don’t hesitate to [contact me](#/contact)."
     },
     {
       "id": "4c42f359-4485-5a48-b4eb-2be27f2d34ed",
@@ -883,24 +882,108 @@
   ],
   "about": {
     "title": "About Me",
-    "infoHtml": "<p><strong>IT generalist, web developer</strong>\n, +13y. enterprise IT employment in Morocco, ex-shop owner (consumer IT). I develop web applications with focus on clean design, usability and quality.</p>",
+    "infoHtml": "<p><strong>IT generalist, web developer</strong>, self-employed after 13y. enterprise IT employment in Morocco, ex-shop owner (consumer IT). I develop web applications with focus on architecture, design and usability.</p>",
     "stack": [
-      "IT / APPLICATION SUPPORT",
-      "BACK-OFFICE AUTOMATION",
       "PROGRAMMING",
       "WEB DEVELOPMENT",
-      "DEVOPS",
+      "BACK-OFFICE AUTOMATION",
       "DATABASES",
+      "DEVOPS",
       "TESTING",
+      "IT / APPLICATION SUPPORT",
+      "KNOWLEDGE MGT.",
       "COMMUNICATION",
-      "LANGUAGES (NL/FR/EN)",
-      "KNOWLEDGE MGT."
+      "LANGUAGES (NL/FR/EN)"
     ],
     "image": "images/profile-picture.webp",
     "toolset": [
       [
+        "opencode.svg",
+        "OpenCode"
+      ],
+      [
+        "intellijidea.svg",
+        "IntelliJ IDEA"
+      ],
+      [
+        "visualstudiocode.svg",
+        "VS Code"
+      ],
+      [
+        "java.svg",
+        "Java"
+      ],
+      [
+        "spring.svg",
+        "Spring"
+      ],
+      [
+        "javascript.svg",
+        "JavaScript"
+      ],
+      [
+        "react.svg",
+        "React"
+      ],
+      [
+        "nodedotjs.svg",
+        "Node.js"
+      ],
+      [
+        "powershell.svg",
+        "Bash/Powershell"
+      ],
+      [
+        "node-red.svg",
+        "Node-RED"
+      ],
+      [
         "mysql.svg",
         "MySQL"
+      ],
+      [
+        "userauthentication.svg",
+        "Keycloak"
+      ],
+      [
+        "elasticsearch.svg",
+        "Elasticsearch"
+      ],
+      [
+        "apachemaven.svg",
+        "Maven"
+      ],
+      [
+        "jenkins.svg",
+        "Jenkins"
+      ],
+      [
+        "git.svg",
+        "Git"
+      ],
+      [
+        "playwright.svg",
+        "Playwright"
+      ],
+      [
+        "selenium.svg",
+        "Selenium"
+      ],
+      [
+        "postman.svg",
+        "Postman"
+      ],
+      [
+        "googlechrome.svg",
+        "Chrome DevTools"
+      ],
+      [
+        "icloud.svg",
+        "Cloud infrastructure"
+      ],
+      [
+        "linux.svg",
+        "Linux"
       ],
       [
         "windows.svg",
@@ -915,84 +998,20 @@
         "Docker"
       ],
       [
-        "powershell.svg",
-        "Bash/Powershell"
-      ],
-      [
-        "linux.svg",
-        "Linux"
-      ],
-      [
         "apache.svg",
         "Apache"
       ],
       [
-        "icloud.svg",
-        "Cloud infrastructure"
-      ],
-      [
-        "git.svg",
-        "Git"
-      ],
-      [
-        "server.svg",
+        "tomcat.svg",
         "Tomcat"
-      ],
-      [
-        "apachemaven.svg",
-        "Maven"
-      ],
-      [
-        "java.svg",
-        "Java"
-      ],
-      [
-        "spring.svg",
-        "Spring"
-      ],
-      [
-        "opencode.svg",
-        "OpenCode"
-      ],
-      [
-        "visualstudiocode.svg",
-        "VS Code"
-      ],
-      [
-        "googlechrome.svg",
-        "Chrome DevTools"
-      ],
-      [
-        "selenium.svg",
-        "Selenium"
-      ],
-      [
-        "postman.svg",
-        "Postman"
-      ],
-      [
-        "jenkins.svg",
-        "Jenkins"
-      ],
-      [
-        "userauthentication.svg",
-        "Keycloak"
-      ],
-      [
-        "elasticsearch.svg",
-        "Elasticsearch"
-      ],
-      [
-        "node-red.svg",
-        "Node-RED"
-      ],
-      [
-        "rocketchat.svg",
-        "RocketChat"
       ],
       [
         "jira.svg",
         "JIRA"
+      ],
+      [
+        "rocketchat.svg",
+        "RocketChat"
       ],
       [
         "openapiinitiative.svg",

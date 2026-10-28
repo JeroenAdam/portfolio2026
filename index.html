@@ -251,6 +251,8 @@
     .stack-label { font-weight: 700; color: var(--heading); margin: 0.9rem 0 0.45rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
     .stack { display: flex; flex-wrap: wrap; gap: 0.45rem; }
     .stack span { background: var(--bg-alt); border: 1px solid var(--line); color: var(--heading); font-size: 0.8rem; font-weight: 600; padding: 0.22rem 0.7rem; border-radius: 20px; }
+    .stack.balance { display: block; text-wrap: balance; }   /* badge rows as balanced text lines, no lonely tail row */
+    .stack.balance span { display: inline-block; margin: 0 0.45rem 0.45rem 0; }
     .project-links { margin-top: 1rem; display: flex; align-items: center; gap: 1rem; }
     .project-links a { font-weight: 700; font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem; }
     .project-links a i { font-size: 1.1rem; }
@@ -280,6 +282,7 @@
     .article .date { color: var(--muted); font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1.8rem; }
     .article .date i { color: var(--accent); }
     .prose p { margin-bottom: 1rem; }
+    .prose.intro p { text-wrap: balance; }   /* about intro: split the two lines evenly */
     .prose h1, .prose h2, .prose h3 { margin: 1.6rem 0 0.7rem; }
     .prose ul, .prose ol { margin: 0 0 1rem 1.5rem; }
     .prose img { display: block; margin: 1.2rem auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--card-shadow); }
@@ -289,8 +292,9 @@
     /* ============================= lightbox (in content) ============================= */
     .lightbox { display: none; position: fixed; z-index: 999; inset: 0; padding: 1em; background: rgba(0, 0, 0, 0.85); }
     .lightbox:target { display: block; }
-    /* JS-managed lightboxes (myboat): opening/closing must not touch the
-       navigation history, so :target is neutralized and .open drives display */
+    /* JS-managed lightboxes (myboat, about, blog article pictures): opening
+       and closing must not touch the navigation history, so :target is
+       neutralized and .open drives the display (see onContentClick) */
     .lightbox.js-lb:target { display: none; }
     .lightbox.js-lb.open { display: block; }
     .lightbox > a { cursor: zoom-out; }
@@ -327,6 +331,7 @@
     .toolset summary .hint { font-weight: 400; }
     .toolset .tools { margin-top: 0.8rem; font-size: 0.92rem; color: var(--muted); }
     .toolset .tools img { height: 22px; vertical-align: -5px; margin: 0 3px 0 10px; }
+    .toolset .tools span { white-space: nowrap; }   /* keep each icon glued to its label; lines break between entries only */
     /* the tool SVGs are plain black; brighten them like text in dark mode */
     html.dark .toolset .tools img { filter: invert(80%); }
     .sideprojects { margin-top: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 0.9rem 1.1rem; }
@@ -443,10 +448,14 @@
       .replace(/url\('(images\/|svg\/)/g, "url('/$1")
       .replace(/url\("(images\/|svg\/)/g, 'url("/$1')
       .replace(/url\((images\/|svg\/)/g, "url(/$1");
-    // Blog prose links out to other sites, so those open in a new tab. Only
-    // outbound URLs qualify: in-page anchors (the lightbox ids) and in-site
-    // routes (#/contact - the "contact me" link) have to stay in this tab.
-    const blankExternal = h => {
+    // Prepares blog prose:
+    // - links out to other sites open in a new tab. Only outbound URLs qualify:
+    //   in-page anchors (the lightbox ids) and in-site routes (#/contact - the
+    //   "contact me" link) have to stay in this tab.
+    // - the pictures become JS-driven lightboxes (js-lb): :target is neutralised
+    //   and .open drives them, so enlarging a photo adds nothing to the history
+    //   and "go back" still lands on the page the article was opened from.
+    const prepareBlogHtml = h => {
       const doc = new DOMParser().parseFromString("<div>" + (h || "") + "</div>", "text/html");
       doc.querySelectorAll("a[href]").forEach(a => {
         if (/^(?:https?:)?\/\//i.test(a.getAttribute("href"))) {
@@ -454,6 +463,7 @@
           a.setAttribute("rel", "noopener noreferrer");
         }
       });
+      doc.querySelectorAll(".lightbox").forEach(div => div.classList.add("js-lb"));
       return doc.body.firstChild.innerHTML;
     };
     function scrollToTarget(frag) {
@@ -483,6 +493,25 @@
         e.preventDefault();
         markForwardIntent();
         window.location.hash = "#" + href;
+        return;
+      }
+      // Content lightboxes (the pictures in blog articles) must stay out of the
+      // navigation history, like the myboat ones: .open shows them, the address
+      // is never touched, so "go back" from the article still leads to the page
+      // it was opened from instead of to the last enlarged picture.
+      if (href && href.charAt(0) === "#" && !href.startsWith("#/")) {
+        const box = a.closest(".lightbox.js-lb");
+        if (box) {                                    // clicking an open picture closes it
+          e.preventDefault();
+          box.classList.remove("open");
+          if (location.hash) history.replaceState(null, "", location.pathname);
+          return;
+        }
+        const target = document.getElementById(href.slice(1));
+        if (target && target.classList.contains("js-lb")) {
+          e.preventDefault();
+          target.classList.add("open");
+        }
       }
     }
     // Special cases: links in the Experience section that lead to a blog article
@@ -526,7 +555,7 @@
     function Md({ text, className, newTab }) {
       const html = marked.parse(text || "", { gfm: true });
       const ready = absHtml(html);
-      return <div className={className} dangerouslySetInnerHTML={{ __html: newTab ? blankExternal(ready) : ready }} onClick={onContentClick} />;
+      return <div className={className} dangerouslySetInnerHTML={{ __html: newTab ? prepareBlogHtml(ready) : ready }} onClick={onContentClick} />;
     }
     function Html({ html, className }) {
       return <div className={className} dangerouslySetInnerHTML={{ __html: absHtml(html) }} onClick={onContentClick} />;
@@ -549,11 +578,11 @@
         </ul>
       );
     }
-    function StackTags({ items }) {
+    function StackTags({ items, balance }) {
       // contentful stack values may arrive as one string "A - B - C" or a list
       const tags = (items || []).flatMap(s => String(s).split(/\s+-\s+/)).filter(Boolean);
       return (
-        <div className="stack">{tags.map((t, i) => <span key={i}>{t.trim()}</span>)}</div>
+        <div className={"stack" + (balance ? " balance" : "")}>{tags.map((t, i) => <span key={i}>{t.trim()}</span>)}</div>
       );
     }
 
@@ -679,7 +708,7 @@
       );
     }
 
-    function JobsSection({ jobs }) {
+    function JobsSection({ jobs, children }) {
       const tabSlug = c => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
       // the selected tab is only kept when returning (via browser history) from a
       // special-case Experience link; normal navigation resets to the first tab
@@ -723,6 +752,7 @@
                 </div>
               ))}
             </div>
+            {children}
           </div>
         </section>
       );
@@ -779,7 +809,9 @@
             </div>
           </header>
           <ServicesSection services={data.services} />
-          <JobsSection jobs={data.jobs} />
+          <JobsSection jobs={data.jobs}>
+            <a href="#/about" className="btn center">about me</a>
+          </JobsSection>
           <section className="section">
             <div className="wrap">
               <SectionTitle title="My projects" />
@@ -822,9 +854,9 @@
               </div>
               <div className="content">
                 <div className="title-row"><h2>{about.title}</h2></div>
-                <Html className="prose" html={about.infoHtml} />
+                <Html className="prose intro" html={about.infoHtml} />
                 <div className="stack-label">My skills</div>
-                <StackTags items={about.stack} />
+                <StackTags items={about.stack} balance />
                 <details className="toolset">
                   <summary><i className="fa-solid fa-screwdriver-wrench"></i> My current toolset <span className="hint">(click to unfold)</span></summary>
                   <div className="tools">
@@ -834,7 +866,7 @@
                   </div>
                 </details>
                 <details className="sideprojects" open>
-                  <summary><i className="fa-solid fa-brain"></i> Side projects</summary>
+                  <summary><i className="fa-solid fa-brain"></i> Personal projects</summary>
                   <div className="items" onClick={onItemsClick}>{about.sideProjects.map((p, i) => <Md key={i} text={p} />)}</div>
                 </details>
                 <div className={"lightbox js-lb" + (lb === "ai-pc-2026" ? " open" : "")} id="ai-pc-2026">
@@ -876,6 +908,14 @@
     }
 
     function BlogPostPage({ data, slug }) {
+      // An old-style link that ends in a picture id (…/#some-photo) still opens
+      // that picture; afterwards the lightboxes are history-free (onContentClick)
+      useEffect(() => {
+        const id = location.hash.slice(1);
+        if (!id) return;
+        const box = document.getElementById(id);
+        if (box && box.classList.contains("lightbox")) box.classList.add("open");
+      }, [slug]);
       const post = data.blogs.find(b => b.slug === slug);
       if (!post) return <NotFound />;
       const fromExperience = isBackViaHistory("/blogs/" + slug);
