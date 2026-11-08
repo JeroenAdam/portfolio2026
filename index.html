@@ -182,7 +182,7 @@
     .hero-info h4 a { color: var(--accent); }
     .hero-info h5 { color: #c2deff; font-weight: 400; font-style: italic; font-size: 1rem; margin-bottom: 1.6rem; }
     .hero-img-wrap { flex: 0 0 304px; }
-    .hero-img-wrap img { border-radius: var(--radius); }
+    .hero-img-wrap img { border: 2px solid var(--accent); border-radius: 50%; }   /* gold ring following the circular cutout, like the about photo */
     .hero .social-links { margin-top: 1.6rem; }
     @media (max-width: 800px) {
       .hero-inner { flex-direction: column-reverse; text-align: center; }
@@ -248,7 +248,7 @@
     .project-info .status { color: var(--blue); font-weight: 600; font-size: 0.92rem; margin-bottom: 0.9rem; }
     .project-desc { color: var(--muted); font-size: 0.97rem; }
     .project-desc p { margin-bottom: 0.5rem; }
-    .stack-label { font-weight: 700; color: var(--heading); margin: 0.9rem 0 0.45rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+    .stack-label { font-weight: 700; color: var(--heading); margin: 0.9rem 0 0.35rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
     .stack { display: flex; flex-wrap: wrap; gap: 0.45rem; }
     .stack span { background: var(--bg-alt); border: 1px solid var(--line); color: var(--heading); font-size: 0.8rem; font-weight: 600; padding: 0.22rem 0.7rem; border-radius: 20px; }
     .stack.balance { display: block; text-wrap: balance; }   /* badge rows as balanced text lines, no lonely tail row */
@@ -282,7 +282,7 @@
     .article .date { color: var(--muted); font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1.8rem; }
     .article .date i { color: var(--accent); }
     .prose p { margin-bottom: 1rem; }
-    .prose.intro p { text-wrap: balance; }   /* about intro: split the two lines evenly */
+	.prose.intro p { font-size: large; text-wrap: balance; letter-spacing: 0.1px; }   /* about intro: split the two lines evenly */
     .prose h1, .prose h2, .prose h3 { margin: 1.6rem 0 0.7rem; }
     .prose ul, .prose ol { margin: 0 0 1rem 1.5rem; }
     .prose img { display: block; margin: 1.2rem auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--card-shadow); }
@@ -320,15 +320,20 @@
     .split .photo { flex: 0 0 260px; }
     .split .photo a { display: block; cursor: zoom-in; position: relative; }
     .split .photo.plain { flex: 0 0 180px; }   /* about-page photo: 180px, not the 260px column */
-    .split .photo.plain img { border: 0; box-shadow: none; }
+    .split .photo.plain img { border: 2px solid var(--accent); border-radius: 50%; box-shadow: none; }   /* gold ring following the circular cutout */
     .split .photo img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--card-shadow); }
     .split .content { flex: 1; }
     .split .content .title-row { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }
     .split .content .title-row h2 { font-size: 1.8rem; }
+    .title-divider { width: 56px; height: 3px; border-radius: 2px; background: var(--accent); margin: -0.4rem 0 1.1rem; }   /* small gold rule under the About me title */
+    .prose h2 + .title-divider { margin-top: 0.1rem; }   /* myboat title keeps its own prose margin; don't pull it up */
     .stack.about-stack { margin-top: 0.8rem; }
     .toolset { margin-top: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-alt); padding: 0.9rem 1.1rem; }
     .toolset summary { cursor: pointer; font-weight: 700; color: var(--heading); }
     .toolset summary .hint { font-weight: 400; }
+    .toolset summary .hint.fold { display: none; }                        /* hint follows the native details open state */
+    .toolset[open] summary .hint.fold { display: inline; }
+    .toolset[open] summary .hint.unfold { display: none; }
     .toolset .tools { margin-top: 0.8rem; font-size: 0.92rem; color: var(--muted); }
     .toolset .tools img { height: 22px; vertical-align: -5px; margin: 0 3px 0 10px; }
     .toolset .tools span { white-space: nowrap; }   /* keep each icon glued to its label; lines break between entries only */
@@ -347,6 +352,7 @@
     /* ============================= contact ============================= */
     .contact-box { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--card-shadow); padding: 2.4rem; }
     .contact-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-box .title-divider { margin: 0.1rem auto 1.2rem; }   /* gold rule centered under the centered title */
     .contact-box .lead { text-align: center; color: var(--muted); margin-bottom: 1.6rem; }
     .form-group { display: grid; gap: 1rem; margin-bottom: 1.2rem; }
     .form-control { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.7rem 0.9rem; font: 400 1rem var(--font-body); background: var(--bg-alt); color: var(--ink); }
@@ -854,11 +860,12 @@
               </div>
               <div className="content">
                 <div className="title-row"><h2>{about.title}</h2></div>
+                <div className="title-divider" />
                 <Html className="prose intro" html={about.infoHtml} />
                 <div className="stack-label">My skills</div>
                 <StackTags items={about.stack} balance />
                 <details className="toolset">
-                  <summary><i className="fa-solid fa-screwdriver-wrench"></i> My current toolset <span className="hint">(click to unfold)</span></summary>
+                  <summary><i className="fa-solid fa-screwdriver-wrench"></i> My current toolset <span className="hint unfold">(click to unfold)</span><span className="hint fold"> (click to fold)</span></summary>
                   <div className="tools">
                     {about.toolset.map(([icon, label]) => (
                       <span key={label}><img src={abs("svg/" + icon)} alt="" /> {label}</span>
@@ -990,6 +997,7 @@
               </div>
               <div className="content prose">
                 <h2>{myboat.title}</h2>
+                <div className="title-divider" />
                 <Html html={myboat.infoHtml} />
                 <ul className="specs">
                   <li>Manufactured: 2008, <a id="nagelnieuw-1" href="#nagelnieuw" onClick={e => openLb(e, "nagelnieuw")}>commissioning at Drimmelen</a></li>
@@ -1041,6 +1049,7 @@
           <div className="wrap">
             <div className="contact-box">
               <h3>get in touch</h3>
+              <div className="title-divider" />
               <p className="lead">Send me a message &mdash; or mail directly to <a href={"mailto:" + data.profile.email}>{data.profile.email}</a>.</p>
               <form action={data.profile.formAction} method="POST">
                 <div className="form-group">
